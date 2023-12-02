@@ -9,11 +9,30 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div class="NavBar" id="navigation">
+        <nav>
+            <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">register</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">appointments</a></li>
+            <li><a href="#">clients</a></li>
+            <li><a href="#">profile</a></li>
+
+        </ul>
+        </nav>
+    </div>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <style>
+        .NavBar{
+            background-color:aqua;
+           flex:auto;
+        }
+    </style>
 </body>
 </html>
