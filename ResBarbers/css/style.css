@@ -1,0 +1,47 @@
+﻿
+head {
+    background-color: silver;
+}
+
+body{
+    background-color:silver;
+}
+
+.navbar{
+    background-color:silver;
+}
+.container-fluid {
+    background-color: rgb(75,110,160);
+    opacity: 0.9;
+}
+
+.nav-item {
+    font-size: 20px;
+    background-color: rgb(75,110,160);
+}
+
+    .nav-item :hover {
+        font-size: 21px;
+        background-color: silver;
+    }
+
+.container-fluid .btn {
+    color: black;
+    background-color: rgb(75,110,160);
+}
+
+.container-fluid .btn:hover{
+    color: black;
+    background-color: silver;
+}
+
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 3px;
+    /*background-color: rgb(75,110,160);*/
+    background-color:rgb(75,110,160);
+    ;
+    color: black;
+}
