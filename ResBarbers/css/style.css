@@ -1,47 +1,77 @@
-﻿
-head {
+﻿/*rgb(75,110,160);*/
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-image: url('/images/Background/background (3).jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: silver;
+}
+
+button {
     background-color: silver;
 }
 
-body{
-    background-color:silver;
-}
 
-.navbar{
-    background-color:silver;
-}
-.container-fluid {
-    background-color: rgb(75,110,160);
-    opacity: 0.9;
+
+
+.container {
+    background-color: silver;
 }
 
 .nav-item {
-    font-size: 20px;
-    background-color: rgb(75,110,160);
+    font-size: 16px;
+    background-color: silver;
 }
 
     .nav-item :hover {
-        font-size: 21px;
-        background-color: silver;
+        font-size: 17px;
+        background-color: grey;
     }
 
 .container-fluid .btn {
     color: black;
-    background-color: rgb(75,110,160);
-}
-
-.container-fluid .btn:hover{
-    color: black;
     background-color: silver;
 }
+
+    .container-fluid .btn:hover {
+        color: black;
+        background-color: grey;
+    }
+
+
+.stars li {
+    display: inline-block;
+}
+
+
+.horizontal-list li {
+    display: inline-block;
+    color: black;
+}
+
+.horizontal-list button {
+    background-color: silver;
+}
+
+
+
+
+
+
+
+
 
 
 footer {
     display: block;
     text-align: center;
     padding: 3px;
-    /*background-color: rgb(75,110,160);*/
-    background-color:rgb(75,110,160);
-    ;
+    background-color: silver;
     color: black;
 }

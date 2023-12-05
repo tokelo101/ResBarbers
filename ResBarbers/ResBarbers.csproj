@@ -69,6 +69,36 @@
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
     <Content Include="css\style.css" />
+    <Content Include="images\Background\Wallpaper %281%29.png" />
+    <Content Include="images\Background\Wallpaper %282%29.png" />
+    <Content Include="images\Background\Wallpaper %283%29.png" />
+    <Content Include="images\Background\Wallpaper %284%29.png" />
+    <Content Include="images\Background\Wallpaper %285%29.png" />
+    <Content Include="images\Background\Wallpaper %286%29.png" />
+    <Content Include="images\Haircuts\Female\black_female_cornrows %281%29.png" />
+    <Content Include="images\Haircuts\Female\black_female_cornrows %282%29.png" />
+    <Content Include="images\Haircuts\Female\black_female_cornrows.png" />
+    <Content Include="images\Haircuts\Female\black_female_cornrows_styled.png" />
+    <Content Include="images\Haircuts\Female\black_female_natural_hair_styled %281%29.png" />
+    <Content Include="images\Haircuts\Female\Catalog\black_female_natural_hair_styled.png" />
+    <Content Include="images\Haircuts\Female\white_hair_cut.png" />
+    <Content Include="images\Haircuts\Male\barber-935324.jpg" />
+    <Content Include="images\Haircuts\Male\barber-935324_640.jpg" />
+    <Content Include="images\Haircuts\Male\barber-shop-5212059.jpg" />
+    <Content Include="images\Haircuts\Male\barber-shop-5212059_640.jpg" />
+    <Content Include="images\Haircuts\Male\black_male_bald_cut.png" />
+    <Content Include="images\Haircuts\Male\black_male_dreadlogs.png" />
+    <Content Include="images\Haircuts\Male\black_male_Fade.png" />
+    <Content Include="images\Haircuts\Male\black_male_haircut.png" />
+    <Content Include="images\Haircuts\Male\black_male_short_fade.png" />
+    <Content Include="images\Haircuts\Male\Catalog\black_male_haircut %281%29.png" />
+    <Content Include="images\Haircuts\Male\Catalog\black_male_haircut %282%29.png" />
+    <Content Include="images\Haircuts\Male\Catalog\black_male_haircut_dread_logs_short_hair_single_image.png" />
+    <Content Include="images\Haircuts\Male\Catalog\black_male_haircut_fade_short_hair.png" />
+    <Content Include="images\Haircuts\Male\Catalog\black_male_haircut_fade_short_hair_single_image.png" />
+    <Content Include="images\Haircuts\Male\Catalog\white_male_black_hair_cut.png" />
+    <Content Include="images\Haircuts\Male\white_male_hair_cut.png" />
+    <Content Include="images\Top Haircuts\laptop.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +128,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\Top Barbers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
