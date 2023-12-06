@@ -1,7 +1,8 @@
 ﻿/*rgb(75,110,160);*/
 
+
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     background-image: url('/images/Background/background (3).jpg');
     background-repeat: no-repeat;
     height: 100%;
@@ -9,13 +10,29 @@ body {
     background-size: cover;
 }
 
-h1 {
+
+
+h1, h2, h3, h4, h5, h6, label {
     color: silver;
+    text-align:center;
 }
 
-button {
+
+
+#btnRegister {
     background-color: silver;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
 }
+
+
+#btnRegister:hover {
+    background-color: grey;
+    margin-top: 5px;
+}
+
 
 
 
@@ -63,7 +80,11 @@ button {
 
 
 
-
+.frmRegister {
+    color: silver;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 
 
