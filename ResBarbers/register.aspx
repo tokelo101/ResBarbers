@@ -6,7 +6,7 @@
 
 
 
-    <div class="row no-gutters">
+    <div class="row no-gutters justify-content-center">
         <div class="col-md-6">
             <div class="register-wrap w-100 p-md-5 p-4">
                 <h2 class="mb-4">Register</h2>

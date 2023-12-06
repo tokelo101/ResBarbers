@@ -1,5 +1,4 @@
-﻿/*rgb(75,110,160);*/
-
+﻿
 
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -27,11 +26,24 @@ h1, h2, h3, h4, h5, h6, label {
     width: 100%;
 }
 
+#btnLogin {
+    background-color: silver;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
 
-#btnRegister:hover {
+
+#btnRegister:hover{
     background-color: grey;
     margin-top: 5px;
 }
+
+#btnLogin:hover {
+    background-color: grey;
+    margin-top: 5px;
+    }
 
 
 
