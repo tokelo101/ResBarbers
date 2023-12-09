@@ -13,5 +13,10 @@ namespace ResBarbers.css
         {
 
         }
+
+        protected void OnLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }

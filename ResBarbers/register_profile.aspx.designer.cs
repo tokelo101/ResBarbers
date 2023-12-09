@@ -11,34 +11,25 @@ namespace ResBarbers
 {
 
 
-    public partial class register
+    public partial class register_profile
     {
 
         /// <summary>
-        /// datepicker control.
+        /// btnBackToRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datepicker;
+        protected global::System.Web.UI.WebControls.Button btnBackToRegister;
 
         /// <summary>
-        /// calendarDate control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendarDate;
-
-        /// <summary>
-        /// btnNext control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNext;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
     }
 }

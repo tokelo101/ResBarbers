@@ -25,8 +25,9 @@
                             </div>
                         </div>
                         <div class="col-md-12">
+                            <a href="#">Forgot Password</a>
                             <div class="form-group">
-                                <input type="submit" id="btnLogin" value="Login" class="btn btn-primary">
+                                <asp:button type="submit" runat="server" id="btnLogin" value="Login" Text="Login" class="btn" OnClick="OnLogin"></asp:button>
                                 <div class="submitting"></div>
                             </div>
                         </div>
