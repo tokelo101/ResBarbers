@@ -23,6 +23,9 @@ namespace ResBarbers.MainServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AboutField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Addressline1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -32,10 +35,22 @@ namespace ResBarbers.MainServiceReference {
         private string Addressline3Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AgeField;
+        private ResBarbers.MainServiceReference.Appointment[] AppointmentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContactsField;
+        private ResBarbers.MainServiceReference.Appointment[] Appointments1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CampusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -50,22 +65,43 @@ namespace ResBarbers.MainServiceReference {
         private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.MenuItem[] MenuItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PassPhraseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ResNameField;
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ResidenceNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.Review[] ReviewsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.Review[] Reviews1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UniversityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UserDOBField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserTypeField;
+        private string UserNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string WhatsAppField;
+        private string UserPictureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -74,6 +110,19 @@ namespace ResBarbers.MainServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string About {
+            get {
+                return this.AboutField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AboutField, value) != true)) {
+                    this.AboutField = value;
+                    this.RaisePropertyChanged("About");
+                }
             }
         }
         
@@ -117,27 +166,79 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Age {
+        public ResBarbers.MainServiceReference.Appointment[] Appointments {
             get {
-                return this.AgeField;
+                return this.AppointmentsField;
             }
             set {
-                if ((this.AgeField.Equals(value) != true)) {
-                    this.AgeField = value;
-                    this.RaisePropertyChanged("Age");
+                if ((object.ReferenceEquals(this.AppointmentsField, value) != true)) {
+                    this.AppointmentsField = value;
+                    this.RaisePropertyChanged("Appointments");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Contacts {
+        public ResBarbers.MainServiceReference.Appointment[] Appointments1 {
             get {
-                return this.ContactsField;
+                return this.Appointments1Field;
             }
             set {
-                if ((object.ReferenceEquals(this.ContactsField, value) != true)) {
-                    this.ContactsField = value;
-                    this.RaisePropertyChanged("Contacts");
+                if ((object.ReferenceEquals(this.Appointments1Field, value) != true)) {
+                    this.Appointments1Field = value;
+                    this.RaisePropertyChanged("Appointments1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Campus {
+            get {
+                return this.CampusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CampusField, value) != true)) {
+                    this.CampusField = value;
+                    this.RaisePropertyChanged("Campus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
+            get {
+                return this.ClientBarberHistoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
+                    this.ClientBarberHistoriesField = value;
+                    this.RaisePropertyChanged("ClientBarberHistories");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories1 {
+            get {
+                return this.ClientBarberHistories1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientBarberHistories1Field, value) != true)) {
+                    this.ClientBarberHistories1Field = value;
+                    this.RaisePropertyChanged("ClientBarberHistories1");
                 }
             }
         }
@@ -195,6 +296,19 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.MenuItem[] MenuItems {
+            get {
+                return this.MenuItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MenuItemsField, value) != true)) {
+                    this.MenuItemsField = value;
+                    this.RaisePropertyChanged("MenuItems");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PassPhrase {
             get {
                 return this.PassPhraseField;
@@ -208,14 +322,66 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ResName {
+        public string Phone {
             get {
-                return this.ResNameField;
+                return this.PhoneField;
             }
             set {
-                if ((object.ReferenceEquals(this.ResNameField, value) != true)) {
-                    this.ResNameField = value;
-                    this.RaisePropertyChanged("ResName");
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Province {
+            get {
+                return this.ProvinceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceField, value) != true)) {
+                    this.ProvinceField = value;
+                    this.RaisePropertyChanged("Province");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ResidenceName {
+            get {
+                return this.ResidenceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResidenceNameField, value) != true)) {
+                    this.ResidenceNameField = value;
+                    this.RaisePropertyChanged("ResidenceName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.Review[] Reviews {
+            get {
+                return this.ReviewsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReviewsField, value) != true)) {
+                    this.ReviewsField = value;
+                    this.RaisePropertyChanged("Reviews");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.Review[] Reviews1 {
+            get {
+                return this.Reviews1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Reviews1Field, value) != true)) {
+                    this.Reviews1Field = value;
+                    this.RaisePropertyChanged("Reviews1");
                 }
             }
         }
@@ -234,6 +400,19 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UserDOB {
+            get {
+                return this.UserDOBField;
+            }
+            set {
+                if ((this.UserDOBField.Equals(value) != true)) {
+                    this.UserDOBField = value;
+                    this.RaisePropertyChanged("UserDOB");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int UserID {
             get {
                 return this.UserIDField;
@@ -242,6 +421,32 @@ namespace ResBarbers.MainServiceReference {
                 if ((this.UserIDField.Equals(value) != true)) {
                     this.UserIDField = value;
                     this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPicture {
+            get {
+                return this.UserPictureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPictureField, value) != true)) {
+                    this.UserPictureField = value;
+                    this.RaisePropertyChanged("UserPicture");
                 }
             }
         }
@@ -259,15 +464,918 @@ namespace ResBarbers.MainServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string WhatsApp {
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Appointment", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class Appointment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime AppointmentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AppointmentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppointmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan AppointmentTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.MenuItem MenuItemField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StyleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
-                return this.WhatsAppField;
+                return this.extensionDataField;
             }
             set {
-                if ((object.ReferenceEquals(this.WhatsAppField, value) != true)) {
-                    this.WhatsAppField = value;
-                    this.RaisePropertyChanged("WhatsApp");
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime AppointmentDate {
+            get {
+                return this.AppointmentDateField;
+            }
+            set {
+                if ((this.AppointmentDateField.Equals(value) != true)) {
+                    this.AppointmentDateField = value;
+                    this.RaisePropertyChanged("AppointmentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AppointmentID {
+            get {
+                return this.AppointmentIDField;
+            }
+            set {
+                if ((this.AppointmentIDField.Equals(value) != true)) {
+                    this.AppointmentIDField = value;
+                    this.RaisePropertyChanged("AppointmentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppointmentStatus {
+            get {
+                return this.AppointmentStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentStatusField, value) != true)) {
+                    this.AppointmentStatusField = value;
+                    this.RaisePropertyChanged("AppointmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan AppointmentTime {
+            get {
+                return this.AppointmentTimeField;
+            }
+            set {
+                if ((this.AppointmentTimeField.Equals(value) != true)) {
+                    this.AppointmentTimeField = value;
+                    this.RaisePropertyChanged("AppointmentTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
+            get {
+                return this.ClientBarberHistoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
+                    this.ClientBarberHistoriesField = value;
+                    this.RaisePropertyChanged("ClientBarberHistories");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientID {
+            get {
+                return this.ClientIDField;
+            }
+            set {
+                if ((this.ClientIDField.Equals(value) != true)) {
+                    this.ClientIDField = value;
+                    this.RaisePropertyChanged("ClientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.MenuItem MenuItem {
+            get {
+                return this.MenuItemField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MenuItemField, value) != true)) {
+                    this.MenuItemField = value;
+                    this.RaisePropertyChanged("MenuItem");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StyleID {
+            get {
+                return this.StyleIDField;
+            }
+            set {
+                if ((this.StyleIDField.Equals(value) != true)) {
+                    this.StyleIDField = value;
+                    this.RaisePropertyChanged("StyleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_ {
+            get {
+                return this.USER_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
+                    this.USER_Field = value;
+                    this.RaisePropertyChanged("USER_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_1 {
+            get {
+                return this.USER_1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
+                    this.USER_1Field = value;
+                    this.RaisePropertyChanged("USER_1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ClientBarberHistory", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class ClientBarberHistory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.Appointment AppointmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime AppointmentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AppointmentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan AppointmentTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CancelDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.TimeSpan> CancelTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool CanceledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FulfillDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.TimeSpan> FulfillTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool FulfilledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int HistoryIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> PostponeDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.TimeSpan> PostponeTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool PostponedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime RequestDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan RequestTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> RevIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.Review ReviewField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.Appointment Appointment {
+            get {
+                return this.AppointmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentField, value) != true)) {
+                    this.AppointmentField = value;
+                    this.RaisePropertyChanged("Appointment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime AppointmentDate {
+            get {
+                return this.AppointmentDateField;
+            }
+            set {
+                if ((this.AppointmentDateField.Equals(value) != true)) {
+                    this.AppointmentDateField = value;
+                    this.RaisePropertyChanged("AppointmentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AppointmentID {
+            get {
+                return this.AppointmentIDField;
+            }
+            set {
+                if ((this.AppointmentIDField.Equals(value) != true)) {
+                    this.AppointmentIDField = value;
+                    this.RaisePropertyChanged("AppointmentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan AppointmentTime {
+            get {
+                return this.AppointmentTimeField;
+            }
+            set {
+                if ((this.AppointmentTimeField.Equals(value) != true)) {
+                    this.AppointmentTimeField = value;
+                    this.RaisePropertyChanged("AppointmentTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CancelDate {
+            get {
+                return this.CancelDateField;
+            }
+            set {
+                if ((this.CancelDateField.Equals(value) != true)) {
+                    this.CancelDateField = value;
+                    this.RaisePropertyChanged("CancelDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.TimeSpan> CancelTime {
+            get {
+                return this.CancelTimeField;
+            }
+            set {
+                if ((this.CancelTimeField.Equals(value) != true)) {
+                    this.CancelTimeField = value;
+                    this.RaisePropertyChanged("CancelTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Canceled {
+            get {
+                return this.CanceledField;
+            }
+            set {
+                if ((this.CanceledField.Equals(value) != true)) {
+                    this.CanceledField = value;
+                    this.RaisePropertyChanged("Canceled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientID {
+            get {
+                return this.ClientIDField;
+            }
+            set {
+                if ((this.ClientIDField.Equals(value) != true)) {
+                    this.ClientIDField = value;
+                    this.RaisePropertyChanged("ClientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FulfillDate {
+            get {
+                return this.FulfillDateField;
+            }
+            set {
+                if ((this.FulfillDateField.Equals(value) != true)) {
+                    this.FulfillDateField = value;
+                    this.RaisePropertyChanged("FulfillDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.TimeSpan> FulfillTime {
+            get {
+                return this.FulfillTimeField;
+            }
+            set {
+                if ((this.FulfillTimeField.Equals(value) != true)) {
+                    this.FulfillTimeField = value;
+                    this.RaisePropertyChanged("FulfillTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Fulfilled {
+            get {
+                return this.FulfilledField;
+            }
+            set {
+                if ((this.FulfilledField.Equals(value) != true)) {
+                    this.FulfilledField = value;
+                    this.RaisePropertyChanged("Fulfilled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int HistoryID {
+            get {
+                return this.HistoryIDField;
+            }
+            set {
+                if ((this.HistoryIDField.Equals(value) != true)) {
+                    this.HistoryIDField = value;
+                    this.RaisePropertyChanged("HistoryID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> PostponeDate {
+            get {
+                return this.PostponeDateField;
+            }
+            set {
+                if ((this.PostponeDateField.Equals(value) != true)) {
+                    this.PostponeDateField = value;
+                    this.RaisePropertyChanged("PostponeDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.TimeSpan> PostponeTime {
+            get {
+                return this.PostponeTimeField;
+            }
+            set {
+                if ((this.PostponeTimeField.Equals(value) != true)) {
+                    this.PostponeTimeField = value;
+                    this.RaisePropertyChanged("PostponeTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Postponed {
+            get {
+                return this.PostponedField;
+            }
+            set {
+                if ((this.PostponedField.Equals(value) != true)) {
+                    this.PostponedField = value;
+                    this.RaisePropertyChanged("Postponed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime RequestDate {
+            get {
+                return this.RequestDateField;
+            }
+            set {
+                if ((this.RequestDateField.Equals(value) != true)) {
+                    this.RequestDateField = value;
+                    this.RaisePropertyChanged("RequestDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan RequestTime {
+            get {
+                return this.RequestTimeField;
+            }
+            set {
+                if ((this.RequestTimeField.Equals(value) != true)) {
+                    this.RequestTimeField = value;
+                    this.RaisePropertyChanged("RequestTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> RevID {
+            get {
+                return this.RevIDField;
+            }
+            set {
+                if ((this.RevIDField.Equals(value) != true)) {
+                    this.RevIDField = value;
+                    this.RaisePropertyChanged("RevID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.Review Review {
+            get {
+                return this.ReviewField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReviewField, value) != true)) {
+                    this.ReviewField = value;
+                    this.RaisePropertyChanged("Review");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_ {
+            get {
+                return this.USER_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
+                    this.USER_Field = value;
+                    this.RaisePropertyChanged("USER_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_1 {
+            get {
+                return this.USER_1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
+                    this.USER_1Field = value;
+                    this.RaisePropertyChanged("USER_1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MenuItem", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class MenuItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.Appointment[] AppointmentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StyleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal StylePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.Appointment[] Appointments {
+            get {
+                return this.AppointmentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentsField, value) != true)) {
+                    this.AppointmentsField = value;
+                    this.RaisePropertyChanged("Appointments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleDescription {
+            get {
+                return this.StyleDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleDescriptionField, value) != true)) {
+                    this.StyleDescriptionField = value;
+                    this.RaisePropertyChanged("StyleDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StyleID {
+            get {
+                return this.StyleIDField;
+            }
+            set {
+                if ((this.StyleIDField.Equals(value) != true)) {
+                    this.StyleIDField = value;
+                    this.RaisePropertyChanged("StyleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleImage {
+            get {
+                return this.StyleImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleImageField, value) != true)) {
+                    this.StyleImageField = value;
+                    this.RaisePropertyChanged("StyleImage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleName {
+            get {
+                return this.StyleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleNameField, value) != true)) {
+                    this.StyleNameField = value;
+                    this.RaisePropertyChanged("StyleName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal StylePrice {
+            get {
+                return this.StylePriceField;
+            }
+            set {
+                if ((this.StylePriceField.Equals(value) != true)) {
+                    this.StylePriceField = value;
+                    this.RaisePropertyChanged("StylePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_ {
+            get {
+                return this.USER_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
+                    this.USER_Field = value;
+                    this.RaisePropertyChanged("USER_");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Review", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class Review : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RatingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RevIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Review1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReviewerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ResBarbers.MainServiceReference.USER_ USER_1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
+            get {
+                return this.ClientBarberHistoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
+                    this.ClientBarberHistoriesField = value;
+                    this.RaisePropertyChanged("ClientBarberHistories");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientID {
+            get {
+                return this.ClientIDField;
+            }
+            set {
+                if ((this.ClientIDField.Equals(value) != true)) {
+                    this.ClientIDField = value;
+                    this.RaisePropertyChanged("ClientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Rating {
+            get {
+                return this.RatingField;
+            }
+            set {
+                if ((this.RatingField.Equals(value) != true)) {
+                    this.RatingField = value;
+                    this.RaisePropertyChanged("Rating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RevID {
+            get {
+                return this.RevIDField;
+            }
+            set {
+                if ((this.RevIDField.Equals(value) != true)) {
+                    this.RevIDField = value;
+                    this.RaisePropertyChanged("RevID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Review1 {
+            get {
+                return this.Review1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Review1Field, value) != true)) {
+                    this.Review1Field = value;
+                    this.RaisePropertyChanged("Review1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Reviewer {
+            get {
+                return this.ReviewerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReviewerField, value) != true)) {
+                    this.ReviewerField = value;
+                    this.RaisePropertyChanged("Reviewer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_ {
+            get {
+                return this.USER_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
+                    this.USER_Field = value;
+                    this.RaisePropertyChanged("USER_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ResBarbers.MainServiceReference.USER_ USER_1 {
+            get {
+                return this.USER_1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
+                    this.USER_1Field = value;
+                    this.RaisePropertyChanged("USER_1");
                 }
             }
         }
@@ -287,10 +1395,16 @@ namespace ResBarbers.MainServiceReference {
     public interface IMainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/RegisterUser", ReplyAction="http://tempuri.org/IMainService/RegisterUserResponse")]
-        bool RegisterUser(ResBarbers.MainServiceReference.USER_ barber);
+        bool RegisterUser(ResBarbers.MainServiceReference.USER_ user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/RegisterUser", ReplyAction="http://tempuri.org/IMainService/RegisterUserResponse")]
-        System.Threading.Tasks.Task<bool> RegisterUserAsync(ResBarbers.MainServiceReference.USER_ barber);
+        System.Threading.Tasks.Task<bool> RegisterUserAsync(ResBarbers.MainServiceReference.USER_ user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/Login", ReplyAction="http://tempuri.org/IMainService/LoginResponse")]
+        int Login(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/Login", ReplyAction="http://tempuri.org/IMainService/LoginResponse")]
+        System.Threading.Tasks.Task<int> LoginAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -320,12 +1434,20 @@ namespace ResBarbers.MainServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public bool RegisterUser(ResBarbers.MainServiceReference.USER_ barber) {
-            return base.Channel.RegisterUser(barber);
+        public bool RegisterUser(ResBarbers.MainServiceReference.USER_ user) {
+            return base.Channel.RegisterUser(user);
         }
         
-        public System.Threading.Tasks.Task<bool> RegisterUserAsync(ResBarbers.MainServiceReference.USER_ barber) {
-            return base.Channel.RegisterUserAsync(barber);
+        public System.Threading.Tasks.Task<bool> RegisterUserAsync(ResBarbers.MainServiceReference.USER_ user) {
+            return base.Channel.RegisterUserAsync(user);
+        }
+        
+        public int Login(string email, string password) {
+            return base.Channel.Login(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<int> LoginAsync(string email, string password) {
+            return base.Channel.LoginAsync(email, password);
         }
     }
 }

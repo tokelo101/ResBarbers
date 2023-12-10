@@ -13,16 +13,35 @@
   <wsdl:message name="IMainService_RegisterUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMainService">
     <wsdl:operation name="RegisterUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/RegisterUser" message="tns:IMainService_RegisterUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/RegisterUserResponse" message="tns:IMainService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/Login" message="tns:IMainService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/LoginResponse" message="tns:IMainService_Login_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="RegisterUser">
       <soap:operation soapAction="http://tempuri.org/IMainService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IMainService/Login" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

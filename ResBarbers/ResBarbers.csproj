@@ -156,6 +156,7 @@
     <Compile Include="register_profile.aspx.designer.cs">
       <DependentUpon>register_profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Secrecy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
