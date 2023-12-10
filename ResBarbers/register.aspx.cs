@@ -20,7 +20,7 @@ namespace ResBarbers
         protected void calendarDate_SelectionChanged(object sender, EventArgs e)
         {
             DateTime selectedDate = calendarDate.SelectedDate;
-            date.Value =selectedDate.ToString("yyyy-MM-dd");
+            datepicker.Text =selectedDate.ToString("yyyy-MM-dd");
         }
 
         protected void OnNextClick(object sender, EventArgs e)
