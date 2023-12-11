@@ -13,5 +13,10 @@ namespace ResBarbers
         {
 
         }
+
+        protected void OnSearch(object sender, EventArgs e)
+        {
+
+        }
     }
 }

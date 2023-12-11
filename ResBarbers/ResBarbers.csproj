@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\MainServiceReference\MainService.disco" />
+    <None Include="Connected Services\MainServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\MainServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\MainServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="css\bootstrap.css" />
     <Content Include="login.aspx" />
     <Content Include="css\style.css" />
@@ -102,9 +111,15 @@
     <Content Include="images\Top Haircuts\laptop.jpg" />
     <Content Include="index.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="register_profile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\MainServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -134,9 +149,27 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="register_profile.aspx.cs">
+      <DependentUpon>register_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register_profile.aspx.designer.cs">
+      <DependentUpon>register_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secrecy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
+    <None Include="Connected Services\MainServiceReference\MainService.wsdl" />
+    <None Include="Connected Services\MainServiceReference\MainService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainServiceReference\MainService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MainServiceReference\MainService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,6 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\Top Barbers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MainServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

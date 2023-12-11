@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ResBarbers.MainServiceReference;
+using SecrecySpace;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +11,22 @@ namespace ResBarbers.css
 {
     public partial class login : System.Web.UI.Page
     {
+        MainServiceClient SR = new MainServiceClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void OnLogin(object sender, EventArgs e)
+        {
+            int userID = SR.Login(email.Value, Secrecy.HashPassword(password.Value));
+
+            if (userID != 0)
+            {
+                Session["LoggedInUser"] = ID;
+                Response.Redirect("index.aspx");
+            }
         }
     }
 }
