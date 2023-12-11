@@ -16,7 +16,7 @@ namespace ResBarbers
         //private string UserID;
         //private string FirstName;
         //private string LastName;
-        //private DateTime UserDOB;
+        private DateTime UserDOB;
         //private string Email;
         //private string Phone;
         //private string University;
@@ -45,13 +45,13 @@ namespace ResBarbers
 
             DateTime selectedDate = calendarDate.SelectedDate;
             datepicker.Text =selectedDate.ToString("yyyy-MM-dd");
-            Session["DOB"] = selectedDate;
+            UserDOB = selectedDate;
         }
 
         protected void OnNextClick(object sender, EventArgs e)
         {
-            
 
+            Session["DOB"] = UserDOB;
             Session["Firstname"] = fname.Value;
             Session["Lastname"] = lname.Value;
             Session["Gender"] = gender.Value;

@@ -23,7 +23,7 @@ namespace ResBarbers
         protected void OnRegisterClick(object sender, EventArgs e)
         {
 
-            var NewUser = new USER_
+            USER_ NewUser = new USER_
             {
                 FirstName = Session["Firstname"].ToString(),
                 LastName = Session["Lastname"].ToString(),
