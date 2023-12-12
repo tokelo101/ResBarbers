@@ -11,9 +11,14 @@
 
 h1, h2, h3, h4, h5, h6, label {
     color: silver;
-    text-align:center;
+    text-align: center;
 }
 
+.media-body {
+    color: silver;
+    text-align: center;
+    border:solid;
+}
 
 .btn {
     background-color: silver;
@@ -23,10 +28,10 @@ h1, h2, h3, h4, h5, h6, label {
     width: 100%;
 }
 
-    .btn:hover {
-        background-color: grey;
-        margin-top: 5px;
-    }
+.btn:hover {
+    background-color: grey;
+    margin-top: 5px;
+}
 
 #btnRegister {
     background-color: silver;
@@ -68,12 +73,27 @@ h1, h2, h3, h4, h5, h6, label {
     margin-top: 5px;
     }
 
+#btnAddHairStyle {
+    background-color: silver;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+#btnAddHairStyle:hover {
+    background-color: grey;
+    margin-top: 5px;
+}
 
 
 
-
-.container {
-    background-color:transparent;
+.media-body, .container {
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    color: silver;
+    text-align: center;
 }
 
 .nav-item {
@@ -87,14 +107,14 @@ h1, h2, h3, h4, h5, h6, label {
     }
 
 .container-fluid .btn {
-    color: black;
+    color: silver;
     background-color: silver;
 }
 
-    .container-fluid .btn:hover {
-        color: black;
-        background-color: grey;
-    }
+.container-fluid .btn:hover {
+    color: black;
+    background-color: grey;
+}
 
 
 .stars li {
@@ -113,8 +133,6 @@ h1, h2, h3, h4, h5, h6, label {
 
 
 
-
-
 .frmRegister {
     color: silver;
     font-size: 20px;
@@ -124,12 +142,12 @@ h1, h2, h3, h4, h5, h6, label {
 
 
 
-footer {
+.foot{
     display: block;
     text-align: center;
     padding: 3px;
     background-color: silver;
-    color: black;
+    color:black;
 }
 
 
@@ -139,3 +157,5 @@ footer {
     border-radius: 50%;
     object-fit: cover;
 }
+
+
