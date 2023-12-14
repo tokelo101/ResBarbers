@@ -8,22 +8,78 @@
     <div class="container-fluid">
         <%-- Catalogue --%>
 
-        <%--<div class="row">--%>
-        <%--<section class="site-section bg-transparent" id="section-menu">--%>
-        <%--<div class="container-fluid">--%>
         <div class="row">
             <h1>Your Hairstyle Catalogue</h1>
         </div>
         <div class="row no-gutters justify-content-center" runat="server">
 
-            <%--<div class="col-md-12">--%>
+            <%-- The Filter Cards--%>
+            <div class="row no-gutters justify-content-center">
 
-            <%--<div class="tab-content text-left">--%>
-            <%--<div class="tab-pane fade show active" id="hairstyle" role="tabpanel" aria-labelledby="hairstyle-tab">--%>
-            <%--<div class="row">--%>
-            <%--<div class="col-md-12 site-animate" id="hairstyle_id" runat="server">--%>
+                <%-- Categories --%>
+                <div class="col-lg-3 col-md-3">
+                    <div class="card">
+                        <div class="card-heading">
+                            <a data-toggle="collapse" data-target="#collapseOne">Category</a>
+                        </div>
+                        <div id="CollapseCategory" class="collapse show" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="Hairstyle_Category">
+                                    <ul class="nice-scroll">
 
+                                        <li><a href="shop.aspx?Category=Men">Men</a></li>
+                                        <li><a href="shop.aspx?Category=Women">Women</a></li>
+                                        <li><a href="shop.aspx?Category=Unisex">Unisex</a></li>
 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="card">
+                        <div class="card-heading">
+                            <a data-toggle="collapse" data-target="#collapseThree">Rating</a>
+                        </div>
+                        <div id="CollapseRating" class="collapse show">
+                            <div class="card-body">
+                                <div class="Hairstyle_Rating">
+                                    <ul>
+                                        <li><a href="shop.aspx?Min=0&&Max=100">0 - 2</a></li>
+                                        <li><a href="shop.aspx?Min=200&&Max=500">3 - 4</a></li>
+                                        <li><a href="shop.aspx?min=1000&&max=1500">5</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="card">
+                        <div class="card-heading">
+                            <a data-toggle="collapse" data-target="#collapseOne">Price</a>
+                        </div>
+                        <div id="CollapsePrice" class="collapse show">
+                            <div class="card-body">
+                                <div class="Hairstyle_Price">
+                                    <ul class="nice-scroll">
+
+                                        <li><a href="shop.aspx?Category=Men">R0 - R100</a></li>
+                                        <li><a href="shop.aspx?Category=Women">R100 - 250</a></li>
+                                        <li><a href="shop.aspx?Category=Unisex">R250+</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -66,9 +122,9 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
-                        
-                        <div class="media-body">
-                        <div class="product__item">
+
+                <div class="media-body">
+                    <div class="product__item">
                         <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
                             <a href="#?ID=">
                                 <img src="images/haircuts/Male/fade (2).png" class="w-50 h-100" alt=""></a>
@@ -101,13 +157,13 @@
                             <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
-                        
-                        <div class="media-body">
-                        <div class="product__item">
+
+                <div class="media-body">
+                    <div class="product__item">
                         <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
                             <a href="#?ID=">
                                 <img src="images/haircuts/Male/blonde.png" class="w-50 h-100" alt=""></a>
@@ -140,13 +196,13 @@
                             <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
-                        
-                        <div class="media-body">
-                        <div class="product__item">
+
+                <div class="media-body">
+                    <div class="product__item">
                         <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
                             <a href="#?ID=">
                                 <img src="images/haircuts/Female/cornrows (1).png" class="w-50 h-100" alt=""></a>
@@ -179,13 +235,13 @@
                             <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
-                        
-                        <div class="media-body">
-                        <div class="product__item">
+
+                <div class="media-body">
+                    <div class="product__item">
                         <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
                             <a href="#?ID=">
                                 <img src="images/haircuts/Female/natural.png" class="w-50 h-100" alt=""></a>
@@ -218,13 +274,13 @@
                             <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        
-                        <div class="media-body">
-                        <div class="product__item">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+
+                <div class="media-body">
+                    <div class="product__item">
                         <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
                             <a href="#?ID=">
                                 <img src="images/haircuts/Male/dreadlogs.png" class="w-50 h-100" alt=""></a>
@@ -257,8 +313,8 @@
                             <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

@@ -160,17 +160,102 @@ h1, h2, h3, h4, h5, h6, label {
 
 
 
+/*shop__sidebar*/
+/*shop_sidebar_accordion removed*/
+
+.card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 25px;
+    background-color: transparent;
+}
+
+    .card:last-child {
+        margin-bottom: 0;
+    }
+
+        .card:last-child .card-body {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+.card-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.card-heading {
+    cursor: pointer;
+}
+
+    .card-heading {
+        color: silver;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+    }
+
+        .card-heading:hover {
+            color: grey;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+        }
+
+
+
+
+
+.Hairstyle_Category ul,
+.Hairstyle_Price ul,
+.Hairstyle_Rating ul {
+    height: 100px;
+}
+
+    .Hairstyle_Category ul li,
+    .Hairstyle_Price ul li,
+    .Hairstyle_Rating ul li {
+        list-style: none;
+    }
+
+    .Hairstyle_Category ul li a,
+    .Hairstyle_Price ul li a,
+    .Hairstyle_Rating ul li a {
+        color: silver;
+        font-size: 15px;
+        line-height: 32px;
+        -webkit-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s;
+        list-style: none;
+    }
+
+.Hairstyle_Category ul li a:hover,
+.Hairstyle_Price ul li a:hover,
+.Hairstyle_Rating ul li a:hover {
+    color: grey;
+}
+
+
+.Hairstyle_Price ul {
+    height: auto;
+}
+
 
 .product__item {
     overflow: hidden;
     margin-bottom: 40px;
 }
 
-    .product__item.sale .product__item__pic .label {
+/*    .product__item.sale .product__item__pic .label {
         color: #ffffff;
         background: #111111;
     }
-
+*/
     .product__item.sale .product__item__text .rating i {
         color: #f7941d;
     }
