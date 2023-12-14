@@ -40,6 +40,9 @@
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <%-- Parent View --%>
+
                     <li class="nav-item">
                         <a class="nav-link active" href="index.aspx">Home</a>
                     </li>
@@ -49,15 +52,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.aspx">Login</a>
                     </li>
+
+                    <%-- Barber View --%>
                     <li class="nav-item">
-                        <a class="nav-link" href="barbers.aspx">Appointments</a>
+                        <a class="nav-link" href="#">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Requests</a>
+                        <a class="nav-link" href="#" hidden>Requests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hairstylesmenu.aspx">Menu</a>
+                        <a class="nav-link" href="hairstylesmenu.aspx" hidden>Menu</a>
                     </li>
+
+
+                    <%--Client View  --%>
+                    <li class="nav-item">
+                        <a class="nav-link" href="barbers.aspx">Barbers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hairstylesmenu.aspx">Hairstyles</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Profile</a>
                     </li>
