@@ -7,7 +7,8 @@
 
 
 
-    <div class="row no-gutters justify-content-center">
+    <div class="container-login">
+        <div class="row no-gutters justify-content-center">
         <div class="col-md-6 ">
             <div class="login-wrap w-100 p-md-5 p-4">
                 <h2 class="mb-4">Login</h2>
@@ -34,6 +35,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 

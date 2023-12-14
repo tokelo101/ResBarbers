@@ -1,12 +1,13 @@
-﻿body {
+﻿
+body {
     font-family: 'Times New Roman', Times, serif;
     background-image: url('/images/Background/background (3).jpg');
     background-repeat: no-repeat;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
+}
 
 
 h1, h2, h3, h4, h5, h6, label {
@@ -96,6 +97,11 @@ h1, h2, h3, h4, h5, h6, label {
     text-align: center;
 }
 
+.container-login {
+    margin-bottom :25%;
+}
+
+
 .nav-item {
     font-size: 16px;
     background-color: silver;
@@ -140,15 +146,6 @@ h1, h2, h3, h4, h5, h6, label {
 }
 
 
-
-
-.foot{
-    display: block;
-    text-align: center;
-    padding: 3px;
-    background-color: silver;
-    color:black;
-}
 
 
 .profile-photo {
@@ -448,3 +445,64 @@ h1, h2, h3, h4, h5, h6, label {
             .product__item__text .product__color__select label input {
                 position: absolute;
                 visibility: hidden;
+            }
+ 
+            
+.scroll-view{
+    height: 90%; /* Set the desired height */
+    overflow: auto; /* Enable scrolling */
+}
+
+.barber-feed {
+    padding: 10px; /* Add padding for spacing */
+}
+
+.barber-view {
+    display:flex;
+    margin-bottom: 100px;
+
+}
+
+    .barber-view img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.barber-view-content h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.barber-view-content p {
+    margin: 0;
+}
+
+.barber-view-content {
+    width:250px;
+    margin-left:100px;
+    text-align:center;
+}
+
+.barber-view-content .btn {
+    width:150px;
+    text-align: center;
+}
+
+.wrapper {
+    min-height: calc(100% - 50px); /* Adjust the height based on your footer height */
+    margin-bottom: 5px; /* Negative margin equal to the footer height */
+    height: 90%;
+}
+
+
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    text-align: center;
+    color: black;
+    height: 75px; /* Set the desired height for the footer */
+    background-color: silver;
+    padding: 10px;
+    margin-top: 10%;
+}
