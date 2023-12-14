@@ -448,3 +448,34 @@ h1, h2, h3, h4, h5, h6, label {
             .product__item__text .product__color__select label input {
                 position: absolute;
                 visibility: hidden;
+            }
+ 
+            
+.scroll-view{
+    height: 400px; /* Set the desired height */
+    overflow: auto; /* Enable scrolling */
+}
+
+.barber-feed {
+    padding: 10px; /* Add padding for spacing */
+}
+
+.barber-view {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+    .barber-view img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.barber-view-content h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.barber-view-content p {
+    margin: 0;
+}

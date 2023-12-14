@@ -50,7 +50,7 @@
                         <a class="nav-link" href="login.aspx">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Appointments</a>
+                        <a class="nav-link" href="barbers.aspx">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Requests</a>

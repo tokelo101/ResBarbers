@@ -76,6 +76,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="barbers.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="hairstylesmenu.aspx" />
     <Content Include="images\icon\calendar.png" />
@@ -121,6 +122,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="barbers.aspx.cs">
+      <DependentUpon>barbers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="barbers.aspx.designer.cs">
+      <DependentUpon>barbers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\MainServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
