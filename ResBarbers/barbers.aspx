@@ -17,12 +17,11 @@
                             <h5>UJ, APK</h5>
                             <h5>The best Barber Around</h5>
 
-
-
                             <button class="btn btn-light">View</button>
                         </div>
                     </div>
-
+                
+        
                     <div class="barber-view">
                         <img src="images/haircuts/Male/fade (2).png" alt="Profile Picture">
                         <div class="barber-view-content">
@@ -30,8 +29,6 @@
                             <h5>Male</h5>
                             <h5>TUT, Hatfield</h5>
                             <h5>Master of blades</h5>
-
-
 
                             <button class="btn btn-light">View</button>
                         </div>
@@ -44,8 +41,6 @@
                             <h5>UJ, SWT</h5>
                             <h5>Very good at cornrows</h5>
 
-
-
                             <button class="btn btn-light">View</button>
                         </div>
                     </div>
@@ -56,8 +51,6 @@
                             <h5>Female</h5>
                             <h5>UL, Mankweng</h5>
                             <h5>I also sell Hair Dye</h5>
-
-
 
                             <button class="btn btn-light">View</button>
                         </div>

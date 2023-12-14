@@ -1,11 +1,14 @@
-﻿body {
+﻿
+body {
     font-family: 'Times New Roman', Times, serif;
     background-image: url('/images/Background/background (3).jpg');
     background-repeat: no-repeat;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
 
 
 
@@ -142,12 +145,14 @@ h1, h2, h3, h4, h5, h6, label {
 
 
 
-.foot{
+
+footer {
+    padding: 10px;
     display: block;
     text-align: center;
     padding: 3px;
     background-color: silver;
-    color:black;
+    color: black;
 }
 
 
@@ -461,8 +466,9 @@ h1, h2, h3, h4, h5, h6, label {
 }
 
 .barber-view {
-    display: flex;
+    display:flex;
     margin-bottom: 100px;
+
 }
 
     .barber-view img {
@@ -478,4 +484,15 @@ h1, h2, h3, h4, h5, h6, label {
 
 .barber-view-content p {
     margin: 0;
+}
+
+.barber-view-content {
+    width:250px;
+    margin-left:100px;
+    text-align:center;
+}
+
+.barber-view-content .btn {
+    width:150px;
+    text-align: center;
 }
