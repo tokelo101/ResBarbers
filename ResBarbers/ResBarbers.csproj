@@ -78,6 +78,11 @@
     </None>
     <Content Include="css\bootstrap.css" />
     <Content Include="hairstylesmenu.aspx" />
+    <Content Include="images\icon\calendar.png" />
+    <Content Include="images\icon\cart.png" />
+    <Content Include="images\icon\compare.png" />
+    <Content Include="images\icon\heart.png" />
+    <Content Include="images\icon\search.png" />
     <Content Include="login.aspx" />
     <Content Include="css\style.css" />
     <Content Include="images\Background\Wallpaper %281%29.png" />

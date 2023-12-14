@@ -9,135 +9,259 @@
         <%-- Catalogue --%>
 
         <%--<div class="row">--%>
-            <%--<section class="site-section bg-transparent" id="section-menu">--%>
-                <%--<div class="container-fluid">--%>
+        <%--<section class="site-section bg-transparent" id="section-menu">--%>
+        <%--<div class="container-fluid">--%>
         <div class="row">
             <h1>Your Hairstyle Catalogue</h1>
         </div>
-            <div class="row no-gutters justify-content-center" runat="server">
+        <div class="row no-gutters justify-content-center" runat="server">
 
-    <%--<div class="col-md-12">--%>
+            <%--<div class="col-md-12">--%>
 
-        <%--<div class="tab-content text-left">--%>
+            <%--<div class="tab-content text-left">--%>
             <%--<div class="tab-pane fade show active" id="hairstyle" role="tabpanel" aria-labelledby="hairstyle-tab">--%>
-                <%--<div class="row">--%>
-                <%--<div class="col-md-12 site-animate" id="hairstyle_id" runat="server">--%>
+            <%--<div class="row">--%>
+            <%--<div class="col-md-12 site-animate" id="hairstyle_id" runat="server">--%>
 
 
 
 
-                    <div class="col-md-4">
-                        
-                        <div class="media-body">
-                        <a href="#?ID="><img src="images/haircuts/Male/fade.png" class="w-25" alt=""></a>
-                            <a href="#">
-                                <h5>Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+
+                <div class="media-body">
+                    <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Male/fade.png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
                         </div>
+
                     </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
 
-                    <div class="col-md-4">
-                        
-                        <div class="media-body">
-                        <a href="#?ID=">
-                            <img src="images/haircuts/Male/dreadlogs.png" class="w-25" alt=""></a>
-                            <a href="#">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
+                        <h3>R67.25</h3>
 
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="hairstyle.aspx?ID=">
-                            <img src="images/haircuts/Female/blonde.png" class="w-25" alt=""></a>
-
-                            <a href="hairstyle.aspx">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="hairstyle.aspx?ID=">
-                            <img src="images/haircuts/Female/cornrows (2).png" class="w-25" alt=""></a>
-
-                            <a href="hairstyle.aspx">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="hairstyle.aspx?ID=">
-                            <img src="images/haircuts/Female/cornrows (3).png" class="w-25" alt=""></a>
-
-                            <a href="hairstyle.aspx">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="#.aspx?ID=">
-                            <img src="images/haircuts/Female/cornrows (4).png" class="w-25" alt=""></a>
-
-                            <a href="hairstyle.aspx">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="#?ID=">
-                            <img src="images/haircuts/Female/natural.png" class="w-25" alt=""></a>
-
-                            <a href="#">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="media-body">
-                        <a href="#?ID=">
-                            <img src="images/haircuts/Female/blonde.png" class="w-25" alt=""></a>
-
-                            <a href="#">
-                                <h5 class="mt-0">Name</h5>
-                            </a>
-                            <p>Description goes here</p>
-                            <h4>R 75.00</h4>
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
                         </div>
                     </div>
                 </div>
-        <asp:Button id="btnAddHairStyle" runat="server" Text="Add Hair Style" class="col-12 justify-content-center"/>
-                <%--</div>--%>
             </div>
-        <%--</div>--%>
-    <%--</div>--%>
-            <%--</div>--%>
-                <%--</div>--%>
-            <%--</section>--%>
-        <%--</div>--%>
-    <%--</div>--%>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                        
+                        <div class="media-body">
+                        <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Male/fade (2).png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
+
+                        <h3>R67.25</h3>
+
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                        
+                        <div class="media-body">
+                        <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Male/blonde.png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
+
+                        <h3>R67.25</h3>
+
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                        
+                        <div class="media-body">
+                        <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Female/cornrows (1).png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
+
+                        <h3>R67.25</h3>
+
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                        
+                        <div class="media-body">
+                        <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Female/natural.png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
+
+                        <h3>R67.25</h3>
+
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        
+                        <div class="media-body">
+                        <div class="product__item">
+                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
+                            <a href="#?ID=">
+                                <img src="images/haircuts/Male/dreadlogs.png" class="w-50 h-100" alt=""></a>
+
+                            <ul class="product__hover">
+                                <li><a href="#">
+                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
+                                <li><a href="#">
+                                    <img src="images/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="product__item__text">
+                        <h2>Fade</h2>
+                        <p>Description goes here 1</p>
+                        <p>Description goes here 2</p>
+                        <p>Description goes here 3</p>
+                        <p>Description goes here 4</p>
+
+                        <h3>R67.25</h3>
+
+                        <div class="rating">
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                            <i class="fa fa-star-o">*</i>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+
 
 </asp:Content>
