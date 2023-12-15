@@ -6,7 +6,7 @@
     
 
     <div class="row justify-content-center">
-        <div class="col-lg-3">
+        <div class="col-lg-4 col-md-8 col-sm-8">
             <div class="barber-view">
                         <img src="images/haircuts/Male/fade.png" alt="Profile Picture">
                         <div class="barber-view-content">
@@ -15,14 +15,15 @@
                             <h5>UJ, APK</h5>
                             <h5>The best Barber Around</h5>
 
-                            <button class="btn btn-light">View</button>
+                            <asp:button id="btnView" runat="server" Text="View" OnClick="OnBarberView" class="btn btn-light" />
+
                         </div>
                     </div>
             
         </div>
 
 
-        <div class="col-lg-3">
+        <div class="col-lg-4 col-md-8 col-sm-8">
 
                 <div class="media-body">
                     <div class="product__item">
@@ -53,7 +54,7 @@
                     </div>
                 </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4">
+                <div class="col-lg-6 col-md-8 col-sm-8">
                     <button class="btn btn-primary">Request</button>
                 </div>
             </div>

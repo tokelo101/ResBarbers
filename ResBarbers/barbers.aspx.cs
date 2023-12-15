@@ -13,5 +13,11 @@ namespace ResBarbers
         {
 
         }
+
+
+        protected void OnBarberView(object sender, EventArgs e)
+        {
+            Response.Redirect("barberview.aspx");
+        }
     }
 }
