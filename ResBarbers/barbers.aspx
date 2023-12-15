@@ -17,7 +17,7 @@
                             <h5>UJ, APK</h5>
                             <h5>The best Barber Around</h5>
 
-                            <button class="btn btn-light">View</button>
+                            <asp:button id="btnView" runat="server" Text="View" OnClick="OnBarberView" class="btn btn-light" />
                         </div>
                     </div>
                 
