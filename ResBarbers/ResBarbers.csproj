@@ -78,7 +78,9 @@
     </None>
     <Content Include="barbers.aspx" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="hairstyles.aspx" />
     <Content Include="hairstylesmenu.aspx" />
+    <Content Include="hairstyleview.aspx" />
     <Content Include="images\icon\calendar.png" />
     <Content Include="images\icon\cart.png" />
     <Content Include="images\icon\compare.png" />
@@ -134,12 +136,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="hairstyles.aspx.cs">
+      <DependentUpon>hairstyles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hairstyles.aspx.designer.cs">
+      <DependentUpon>hairstyles.aspx</DependentUpon>
+    </Compile>
     <Compile Include="hairstylesmenu.aspx.cs">
       <DependentUpon>hairstylesmenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="hairstylesmenu.aspx.designer.cs">
       <DependentUpon>hairstylesmenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hairstyleview.aspx.cs">
+      <DependentUpon>hairstyleview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hairstyleview.aspx.designer.cs">
+      <DependentUpon>hairstyleview.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
