@@ -94,7 +94,7 @@
                                     <img src="images/bootstrap-icons-1.11.2/heart.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist"></a></li>
                                 <li><a href="hairstyleview.aspx">
                                     <img src="images/bootstrap-icons-1.11.2/eye.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="View"></a></li>
-                                <li><a href="#">
+                                <li><a href="#" onclick="openPopup()">
                                     <img src="images/bootstrap-icons-1.11.2/bell.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="Request"></a></li>
                             </ul>
                         </div>
@@ -118,6 +118,38 @@
                         </div>
                     </div>
                 </div>
+
+
+                                <!-- The pop-up form -->
+                <div id="RequestForm" class="RequestPopUp">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h3>Book Haircut</h3>
+                        <div class="form-request">
+                            <label for="date">Available Dates:</label>
+                            <select id="date" name="time" required>
+                                <option value="">-- Select Date --</option>
+                                <option value="25-12-2023">25 December 2023</option>
+                                <option value="09-02-2024">09 February 2024</option>
+                                <option value="12-03-2024">12 March 2024</option>
+
+                            </select>
+
+                            <label for="time">Avaliable Time Slots:</label>
+                            <select id="time" name="time" disabled>
+                                <option value="">-- Select Time --</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                </select>
+
+                            <br>
+                            <asp:Button ID="btnBook" runat="server" Text="Book Haircut" OnClick="OnClientBook" class="btn btn-light" />
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -318,5 +350,17 @@
         </div>
     </div>
 
+    
+     <%-- Script for the pop-up form --%>
+    <script>
+        // Function to open the pop-up form
+        function openPopup() {
+            document.getElementById('RequestForm').style.display = 'block';
+        }
 
+        // Function to close the pop-up form
+        function closePopup() {
+            document.getElementById('RequestForm').style.display = 'none';
+        }
+    </script>
 </asp:Content>

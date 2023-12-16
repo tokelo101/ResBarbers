@@ -13,5 +13,11 @@ namespace ResBarbers
         {
 
         }
+
+        
+        protected void OnClientBook(object sender, EventArgs e)
+        {
+
+        }
     }
 }
