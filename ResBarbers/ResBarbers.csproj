@@ -78,6 +78,7 @@
     </None>
     <Content Include="barbers.aspx" />
     <Content Include="barberview.aspx" />
+    <Content Include="barber_appointments.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="hairstyles.aspx" />
     <Content Include="hairstylesmenu.aspx" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="barberview.aspx.designer.cs">
       <DependentUpon>barberview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="barber_appointments.aspx.cs">
+      <DependentUpon>barber_appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="barber_appointments.aspx.designer.cs">
+      <DependentUpon>barber_appointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\MainServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>

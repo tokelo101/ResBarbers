@@ -453,14 +453,14 @@ h1, h2, h3, h4, h5, h6, label {
     overflow: auto; /* Enable scrolling */
 }
 
-.barber-feed {
+.barber-feed, .client-feed {
     padding: 10px; /* Add padding for spacing */
+    margin-top:50px;
 }
 
-.barber-view {
-    display:flex;
+.barber-view, .client-view {
+    display: flex;
     margin-bottom: 100px;
-
 }
 
     .barber-view img {
@@ -470,7 +470,18 @@ h1, h2, h3, h4, h5, h6, label {
         margin-right: 10px;
     }
 
+.client-view img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 .barber-view-content h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.client-view-content h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -478,15 +489,26 @@ h1, h2, h3, h4, h5, h6, label {
     margin: 0;
 }
 
-.barber-view-content {
-    width:250px;
-    margin-left:100px;
-    text-align:center;
+.client-view-content p {
+    margin: 0;
+}
+
+
+.barber-view-content, client-view-content {
+    width: 250px;
+    margin-left: 100px;
+    text-align: center;
 }
 
 .barber-view-content .btn {
     width:150px;
     text-align: center;
+}
+
+.client-view-content .btn {
+    width: 150px;
+    text-align: center;
+    color:black;
 }
 
 .wrapper {
