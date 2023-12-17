@@ -121,6 +121,7 @@
     <Content Include="images\Haircuts\Male\white_male_hair_cut.png" />
     <Content Include="images\Top Haircuts\laptop.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="register.aspx" />
     <Content Include="register_profile.aspx" />
     <Content Include="Web.config" />
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

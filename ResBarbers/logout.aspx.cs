@@ -7,16 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace ResBarbers
 {
-    public partial class hairstylesmenu : System.Web.UI.Page
+    public partial class logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["UserID"] = 0;
+            Session["UserType"] = null;
 
-        }
-
-        protected void OnClientBook(object sender, EventArgs e)
-        {
-
+            Response.Redirect("index.aspx");
         }
     }
 }

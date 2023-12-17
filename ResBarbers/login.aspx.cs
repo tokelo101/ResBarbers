@@ -21,11 +21,18 @@ namespace ResBarbers.css
         protected void OnLogin(object sender, EventArgs e)
         {
             int userID = SR.Login(email.Value, Secrecy.HashPassword(password.Value));
+            string UserType="";
 
             if (userID != 0)
             {
-                Session["LoggedInUser"] = ID;
+
+                UserType = SR.GetUserType(userID);
+
+                Session["UserType"] = UserType;
+                Session["UserID"] = userID;
                 Response.Redirect("index.aspx");
+
+                
             }
         }
     }
