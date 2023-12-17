@@ -511,6 +511,22 @@ h1, h2, h3, h4, h5, h6, label {
     color:black;
 }
 
+
+/*Caurousel*/
+
+.BarbersCarousel  {
+    color:grey;
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    margin-right: 10px;
+}
+
+
 .wrapper {
     min-height: calc(100% - 50px); /* Adjust the height based on your footer height */
     margin-bottom: 5px; /* Negative margin equal to the footer height */

@@ -13,5 +13,15 @@ namespace ResBarbers
         {
 
         }
+
+        protected void OnClientBook(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void OnBarberView(object sender, EventArgs e)
+        {
+            Response.Redirect("barberview.aspx");
+        }
     }
 }
