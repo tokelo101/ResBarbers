@@ -579,3 +579,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+.filter .Hairstyle_Category {
+    color: grey;
+}

@@ -18,67 +18,45 @@
 
                 <%-- Categories --%>
                 <div class="col-lg-3 col-md-3">
-                    <div class="card">
-                        <div class="card-heading">
-                            <a data-toggle="collapse" data-target="#collapseOne">Category</a>
-                        </div>
-                        <div id="CollapseCategory" class="collapse show" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div class="Hairstyle_Category">
-                                    <ul class="nice-scroll">
+                    
+                            <div class="filter dropdown">
+                                <a class="Hairstyle_Category dropdown-toggle" href="#" id="CategoryFilter" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h5>Category</h5></a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 
-                                        <li><a href="shop.aspx?Category=Men">Men</a></li>
-                                        <li><a href="shop.aspx?Category=Women">Women</a></li>
-                                        <li><a href="shop.aspx?Category=Unisex">Unisex</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Men">Men</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Women">Women</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Unisex">Unisex</a></li>
 
                                     </ul>
-                                </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
+                <div class="col-lg-3 col-md-3">
+                    
+                            <div class="filter dropdown">
+                                <a class="Hairstyle_Category dropdown-toggle" href="#" id="RatingFilter" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h5>Rating</h5></a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 
-                <div class="col-lg-3 col-md-2">
-                    <div class="card">
-                        <div class="card-heading">
-                            <a data-toggle="collapse" data-target="#collapseThree">Rating</a>
-                        </div>
-                        <div id="CollapseRating" class="collapse show">
-                            <div class="card-body">
-                                <div class="Hairstyle_Rating">
-                                    <ul>
-                                        <li><a href="shop.aspx?Min=0&&Max=100">0 - 2</a></li>
-                                        <li><a href="shop.aspx?Min=200&&Max=500">3 - 4</a></li>
-                                        <li><a href="shop.aspx?min=1000&&max=1500">5</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Men">0 - 2</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Women">2 - 3</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Unisex">4 - 5</a></li>
 
                                     </ul>
-                                </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="col-lg-3 col-md-2">
-                    <div class="card">
-                        <div class="card-heading">
-                            <a data-toggle="collapse" data-target="#collapseOne">Price</a>
-                        </div>
-                        <div id="CollapsePrice" class="collapse show">
-                            <div class="card-body">
-                                <div class="Hairstyle_Price">
-                                    <ul class="nice-scroll">
+                <div class="col-lg-3 col-md-3">
+                    
+                            <div class="filter dropdown">
+                                <a class="Hairstyle_Price dropdown-toggle" href="#" id="PriceFilter" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h5>Price</h5></a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 
-                                        <li><a href="shop.aspx?Category=Men">R0 - R100</a></li>
-                                        <li><a href="shop.aspx?Category=Women">R100 - 250</a></li>
-                                        <li><a href="shop.aspx?Category=Unisex">R250+</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Men">R0 - R100</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Women">R100 - R250</a></li>
+                                        <li><a class="dropdown-item" href="shop.aspx?Category=Unisex">R250 - R500+</a></li>
 
                                     </ul>
-                                </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
 
 
@@ -92,11 +70,10 @@
 
                             <ul class="product__hover">
                                 <li><a href="#">
-                                    <img src="images/icon/heart.png" alt=""></a></li>
+                                    <img src="images/bootstrap-icons-1.11.2/pencil.svg" alt="edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></a></li>
                                 <li><a href="#">
-                                    <img src="images/icon/compare.png" alt=""><span></span></a></li>
-                                <li><a href="#" onclick="openPopup()">
-                                    <img src="images/icon/search.png" alt=""></a></li>
+                                    <img src="images/bootstrap-icons-1.11.2/trash.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></a></li>
+                                
                             </ul>
                         </div>
 
