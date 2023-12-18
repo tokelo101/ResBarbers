@@ -34,12 +34,12 @@
                         </div>
                     </div>
                     <div class="barber-view">
-                        <img src="images/haircuts/Female/cornrows (2).png" alt="Profile Picture">
+                        <img src="images/haircuts/Male/Bald.png" alt="Profile Picture">
                         <div class="barber-view-content">
-                            <h3>Jananina Pukwe</h3>
-                            <h5>Female</h5>
+                            <h3>Pule Nko</h3>
+                            <h5>Male</h5>
                             <h5>UJ, SWT</h5>
-                            <h5>Very good at cornrows</h5>
+                            <h5>Very good at Chiskop</h5>
 
                             <button class="btn btn-light">View</button>
                         </div>

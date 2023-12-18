@@ -1405,6 +1405,12 @@ namespace ResBarbers.MainServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/Login", ReplyAction="http://tempuri.org/IMainService/LoginResponse")]
         System.Threading.Tasks.Task<int> LoginAsync(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUserType", ReplyAction="http://tempuri.org/IMainService/GetUserTypeResponse")]
+        string GetUserType(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUserType", ReplyAction="http://tempuri.org/IMainService/GetUserTypeResponse")]
+        System.Threading.Tasks.Task<string> GetUserTypeAsync(int UserID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1448,6 +1454,14 @@ namespace ResBarbers.MainServiceReference {
         
         public System.Threading.Tasks.Task<int> LoginAsync(string email, string password) {
             return base.Channel.LoginAsync(email, password);
+        }
+        
+        public string GetUserType(int UserID) {
+            return base.Channel.GetUserType(UserID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetUserTypeAsync(int UserID) {
+            return base.Channel.GetUserTypeAsync(UserID);
         }
     }
 }
