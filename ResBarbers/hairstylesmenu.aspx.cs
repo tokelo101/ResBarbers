@@ -12,13 +12,10 @@ namespace ResBarbers
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //For Development purposes
-            Session["Userid"] = 1;
-            Session["UserType"] = "Barber";
 
         }
 
-        protected void OnClientBook(object sender, EventArgs e)
+        protected void OnAdd(object sender, EventArgs e)
         {
 
         }

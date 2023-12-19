@@ -69,7 +69,7 @@
                                 <img src="images/haircuts/Male/fade.png" class="w-50 h-100" alt=""></a>
 
                             <ul class="product__hover">
-                                <li><a href="#">
+                                <li><a href="#" onclick="openPopup()">
                                     <img src="images/bootstrap-icons-1.11.2/pencil.svg" alt="edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></a></li>
                                 <li><a href="#">
                                     <img src="images/bootstrap-icons-1.11.2/trash.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></a></li>
@@ -93,36 +93,6 @@
                             <i class="fa fa-star-o">*</i>
                             <i class="fa fa-star-o">*</i>
                             <i class="fa fa-star-o">*</i>
-                        </div>
-                    </div>
-                </div>
-
-
-                        <!-- The pop-up form -->
-                <div id="RequestForm" class="RequestPopUp">
-                    <div class="popup-content">
-                        <span class="close" onclick="closePopup()">&times;</span>
-                        <h3>Book Haircut</h3>
-                        <div class="form-request">
-                            <label for="date">Available Dates:</label>
-                            <select id="date" name="time" required>
-                                <option value="">-- Select Date --</option>
-                                <option value="25-12-2023">25 December 2023</option>
-                                <option value="09-02-2024">09 February 2024</option>
-                                <option value="12-03-2024">12 March 2024</option>
-
-                            </select>
-
-                            <label for="time">Avaliable Time Slots:</label>
-                            <select id="time" name="time" disabled>
-                                <option value="">-- Select Time --</option>
-                                <option value="09:00">09:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                </select>
-
-                            <br>
-                            <asp:Button ID="btnBook" runat="server" Text="Book Haircut" OnClick="OnClientBook" class="btn btn-light" />
                         </div>
                     </div>
                 </div>
@@ -323,7 +293,32 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="row no-gutters justify-content-center">
+               <!-- The pop-up form -->
+                <div id="AddHaircutForm" class="RequestPopUp">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h3>Add Haircut</h3>
+                        <div class="form-request">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" id="sname" />
+                            <label for="description">Description</label>
+                            <input class="form-control" type="text" id="description" />
+                            <label for="price">Price</label>
+                            <input class="form-control" type="text" id="price" />
+                            <label for="image">Image</label>
+                            <input class="form-control" type="file" id="image" />
+                            <br>
+                            <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="OnAdd" class="btn btn-light" />
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-lg-8">
+                    <button id="btnRequest" onClick="openPopup()" class="btn btn-light">Add Haircut</button>
+            </div>
         </div>
     </div>
 
@@ -333,12 +328,12 @@
     <script>
         // Function to open the pop-up form
         function openPopup() {
-            document.getElementById('RequestForm').style.display = 'block';
+            document.getElementById('AddHaircutForm').style.display = 'block';
         }
 
         // Function to close the pop-up form
         function closePopup() {
-            document.getElementById('RequestForm').style.display = 'none';
+            document.getElementById('AddHaircutForm').style.display = 'none';
         }
     </script>
 
