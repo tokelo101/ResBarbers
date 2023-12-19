@@ -585,7 +585,7 @@ footer {
 }
 
 
-/*Add Haircut Form*/
+/*Add and Edit Haircut Form*/
 
 #AddHaircutForm .popup-content {
     background-color: rgb(50, 50,50,0.9);
@@ -594,5 +594,23 @@ footer {
     margin: 100px auto;
     padding: 20px;
     border-radius: 5px;
+    text-align: center;
+}
+
+#EditHaircutForm .popup-content {
+    background-color: rgb(50, 50,50,0.9);
+    width: 600px;
+    height: 420px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+.btnAddContainer .btn {
+    color: black;
+    padding: 20px;
     text-align: center;
 }

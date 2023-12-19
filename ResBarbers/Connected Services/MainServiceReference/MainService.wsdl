@@ -25,6 +25,24 @@
   <wsdl:message name="IMainService_GetUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_AddHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_AddHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHairstyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_RemoveHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_RemoveHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveHairstyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_EditHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_EditHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditHairstyleResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMainService">
     <wsdl:operation name="RegisterUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/RegisterUser" message="tns:IMainService_RegisterUser_InputMessage" />
@@ -37,6 +55,18 @@
     <wsdl:operation name="GetUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetUserType" message="tns:IMainService_GetUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetUserTypeResponse" message="tns:IMainService_GetUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/AddHairstyle" message="tns:IMainService_AddHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/AddHairstyleResponse" message="tns:IMainService_AddHairstyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/RemoveHairstyle" message="tns:IMainService_RemoveHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/RemoveHairstyleResponse" message="tns:IMainService_RemoveHairstyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/EditHairstyle" message="tns:IMainService_EditHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/EditHairstyleResponse" message="tns:IMainService_EditHairstyle_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
@@ -61,6 +91,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetUserType">
       <soap:operation soapAction="http://tempuri.org/IMainService/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IMainService/AddHairstyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IMainService/RemoveHairstyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IMainService/EditHairstyle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

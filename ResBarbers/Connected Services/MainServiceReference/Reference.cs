@@ -1411,6 +1411,24 @@ namespace ResBarbers.MainServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUserType", ReplyAction="http://tempuri.org/IMainService/GetUserTypeResponse")]
         System.Threading.Tasks.Task<string> GetUserTypeAsync(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/AddHairstyle", ReplyAction="http://tempuri.org/IMainService/AddHairstyleResponse")]
+        bool AddHairstyle(ResBarbers.MainServiceReference.MenuItem StyleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/AddHairstyle", ReplyAction="http://tempuri.org/IMainService/AddHairstyleResponse")]
+        System.Threading.Tasks.Task<bool> AddHairstyleAsync(ResBarbers.MainServiceReference.MenuItem StyleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/RemoveHairstyle", ReplyAction="http://tempuri.org/IMainService/RemoveHairstyleResponse")]
+        bool RemoveHairstyle(int StyleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/RemoveHairstyle", ReplyAction="http://tempuri.org/IMainService/RemoveHairstyleResponse")]
+        System.Threading.Tasks.Task<bool> RemoveHairstyleAsync(int StyleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/EditHairstyle", ReplyAction="http://tempuri.org/IMainService/EditHairstyleResponse")]
+        bool EditHairstyle(ResBarbers.MainServiceReference.MenuItem Hairstyle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/EditHairstyle", ReplyAction="http://tempuri.org/IMainService/EditHairstyleResponse")]
+        System.Threading.Tasks.Task<bool> EditHairstyleAsync(ResBarbers.MainServiceReference.MenuItem Hairstyle);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1462,6 +1480,30 @@ namespace ResBarbers.MainServiceReference {
         
         public System.Threading.Tasks.Task<string> GetUserTypeAsync(int UserID) {
             return base.Channel.GetUserTypeAsync(UserID);
+        }
+        
+        public bool AddHairstyle(ResBarbers.MainServiceReference.MenuItem StyleID) {
+            return base.Channel.AddHairstyle(StyleID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddHairstyleAsync(ResBarbers.MainServiceReference.MenuItem StyleID) {
+            return base.Channel.AddHairstyleAsync(StyleID);
+        }
+        
+        public bool RemoveHairstyle(int StyleID) {
+            return base.Channel.RemoveHairstyle(StyleID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RemoveHairstyleAsync(int StyleID) {
+            return base.Channel.RemoveHairstyleAsync(StyleID);
+        }
+        
+        public bool EditHairstyle(ResBarbers.MainServiceReference.MenuItem Hairstyle) {
+            return base.Channel.EditHairstyle(Hairstyle);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditHairstyleAsync(ResBarbers.MainServiceReference.MenuItem Hairstyle) {
+            return base.Channel.EditHairstyleAsync(Hairstyle);
         }
     }
 }

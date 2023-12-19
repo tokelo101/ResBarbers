@@ -69,7 +69,7 @@
                                 <img src="images/haircuts/Male/fade.png" class="w-50 h-100" alt=""></a>
 
                             <ul class="product__hover">
-                                <li><a href="#" onclick="openPopup()">
+                                <li><a href="#" onclick="openPopup('EditHaircutForm')">
                                     <img src="images/bootstrap-icons-1.11.2/pencil.svg" alt="edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></a></li>
                                 <li><a href="#">
                                     <img src="images/bootstrap-icons-1.11.2/trash.svg" alt="remove" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></a></li>
@@ -96,6 +96,30 @@
                         </div>
                     </div>
                 </div>
+
+
+                   <!-- The 'Edit Haircut' pop-up form -->
+                <div id="EditHaircutForm" class="RequestPopUp">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup('EditHaircutForm')">&times;</span>
+                        <h3>Edit Haircut</h3>
+                        <div class="form-request">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" id="Edt_name" required />
+                            <label for="description">Description</label>
+                            <input class="form-control" type="text" id="Edt_description" required />
+                            <label for="price">Price</label>
+                            <input class="form-control" type="text" id="Edt_price" required />
+                            <label for="image">Image</label>
+                            <input class="form-control" type="file" id="Edt_image" required />
+                            <br>
+                            <asp:Button ID="Button1" runat="server" Text="Add" OnClick="OnAdd" class="btn btn-light" />
+                        </div>
+                    </div>
+                </div>
+
+
+
 
             </div>
 
@@ -296,20 +320,20 @@
         </div>
 
         <div class="row no-gutters justify-content-center">
-               <!-- The pop-up form -->
+               <!-- The Add Haircut pop-up form -->
                 <div id="AddHaircutForm" class="RequestPopUp">
                     <div class="popup-content">
-                        <span class="close" onclick="closePopup()">&times;</span>
+                        <span class="close" onclick="closePopup('AddHaircutForm')">&times;</span>
                         <h3>Add Haircut</h3>
                         <div class="form-request">
                             <label for="name">Name</label>
-                            <input class="form-control" type="text" id="sname" />
+                            <input class="form-control" type="text" id="sname" runat="server" required />
                             <label for="description">Description</label>
-                            <input class="form-control" type="text" id="description" />
+                            <input class="form-control" type="text" id="description" runat="server" required />
                             <label for="price">Price</label>
-                            <input class="form-control" type="text" id="price" />
+                            <input class="form-control" type="text" id="price" runat="server" required />
                             <label for="image">Image</label>
-                            <input class="form-control" type="file" id="image" />
+                            <input class="form-control" type="file" id="image" runat="server" required />
                             <br>
                             <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="OnAdd" class="btn btn-light" />
                         </div>
@@ -317,7 +341,10 @@
                 </div>
 
             <div class="col-lg-8">
-                    <button id="btnRequest" onClick="openPopup()" class="btn btn-light">Add Haircut</button>
+            <div class="btnAddContainer">
+                    <a id="btnAddHaircut" onClick="openPopup('AddHaircutForm')" class="btn btn-success">Add Haircut</a>
+
+            </div>
             </div>
         </div>
     </div>
@@ -326,15 +353,17 @@
 
      <%-- Script for the pop-up form --%>
     <script>
-        // Function to open the pop-up form
-        function openPopup() {
-            document.getElementById('AddHaircutForm').style.display = 'block';
+        // Function to open the 'Add Haircut' pop-up form
+        function openPopup(id) {
+            document.getElementById(id).style.display = 'block';
         }
 
-        // Function to close the pop-up form
-        function closePopup() {
-            document.getElementById('AddHaircutForm').style.display = 'none';
+        // Function to close the 'Add Haircut' pop-up form
+        function closePopup(id) {
+            document.getElementById(id).style.display = 'none';
         }
+
+
     </script>
 
 </asp:Content>
