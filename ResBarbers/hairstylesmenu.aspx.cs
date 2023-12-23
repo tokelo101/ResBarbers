@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using MenuItem = ResBarbers.MainServiceReference.MenuItem;
 
 namespace ResBarbers
 {
@@ -16,53 +18,81 @@ namespace ResBarbers
 
 
         }
+        protected void OnTest(object sender, EventArgs e)
+        {
+
+            Response.Redirect("index.aspx");
+        }
+
+        protected void OnLogin(object sender, EventArgs e)
+        {
+
+            Response.Redirect("index.aspx");
+        }
 
         protected void OnAdd(object sender, EventArgs e)
         {
+
+
             var hairstyle = new MenuItem
             {
-              StyleName = sname.Value,
-              StyleDescription = description.Value,
-              StylePrice = Decimal.Parse(price.Value),
-              StyleImage = image.Value
+              BarberID = 1,
+              StyleName = Add_name.Value,
+              StyleDescription = Add_description.Value,
+              StylePrice = Decimal.Parse(Add_price.Value),
+              StyleImage = Add_image.Value
             };
 
             bool Added = SR.AddHairstyle(hairstyle);
 
             if (Added.Equals(true))
             {
-                //alert
+                Response.Redirect("index.aspx");
 
             }
             else
             {
-                //alert
-
+                Response.Redirect("hairstylesmenu.aspx");
             }
+
 
         }
 
         protected void OnEdit(object sender, EventArgs e)
         {
-
-            var hairstyle = new MenuItem
+            bool Edited = false;
+            if (Request.QueryString["StyleID"] != null)
             {
-                StyleName = sname.Value,
-                StyleDescription = description.Value,
-                StylePrice = Decimal.Parse(price.Value),
-                StyleImage = image.Value
-            };
+            int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
 
-            bool Edited = SR.EditHairstyle(hairstyle);
+                var hairstyle = new MainServiceReference.MenuItem
+                {
+                    //StyleName = sname.Value,
+                    //StyleDescription = description.Value,
+                    //StylePrice = Decimal.Parse(price.Value),
+                    //StyleImage = image.Value
+                };
+                Edited = SR.EditHairstyle(StyleID, hairstyle);
+
+            }
+            else
+            {
+                //Problems with URL Parameters
+            }
+
+            
+
 
             if (Edited.Equals(true))
             {
                 //alert
+                Response.Redirect("index.aspx");
 
             }
             else
             {
                 //alert
+                Response.Redirect("index.aspx");
 
             }
 
@@ -70,6 +100,7 @@ namespace ResBarbers
 
         protected void OnDelete(object sender, EventArgs e)
         {
+            Response.Redirect("index.aspx");
 
         }
     }

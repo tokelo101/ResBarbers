@@ -1425,10 +1425,10 @@ namespace ResBarbers.MainServiceReference {
         System.Threading.Tasks.Task<bool> RemoveHairstyleAsync(int StyleID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/EditHairstyle", ReplyAction="http://tempuri.org/IMainService/EditHairstyleResponse")]
-        bool EditHairstyle(ResBarbers.MainServiceReference.MenuItem Hairstyle);
+        bool EditHairstyle(int StyleID, ResBarbers.MainServiceReference.MenuItem Hairstyle);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/EditHairstyle", ReplyAction="http://tempuri.org/IMainService/EditHairstyleResponse")]
-        System.Threading.Tasks.Task<bool> EditHairstyleAsync(ResBarbers.MainServiceReference.MenuItem Hairstyle);
+        System.Threading.Tasks.Task<bool> EditHairstyleAsync(int StyleID, ResBarbers.MainServiceReference.MenuItem Hairstyle);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1498,12 +1498,12 @@ namespace ResBarbers.MainServiceReference {
             return base.Channel.RemoveHairstyleAsync(StyleID);
         }
         
-        public bool EditHairstyle(ResBarbers.MainServiceReference.MenuItem Hairstyle) {
-            return base.Channel.EditHairstyle(Hairstyle);
+        public bool EditHairstyle(int StyleID, ResBarbers.MainServiceReference.MenuItem Hairstyle) {
+            return base.Channel.EditHairstyle(StyleID, Hairstyle);
         }
         
-        public System.Threading.Tasks.Task<bool> EditHairstyleAsync(ResBarbers.MainServiceReference.MenuItem Hairstyle) {
-            return base.Channel.EditHairstyleAsync(Hairstyle);
+        public System.Threading.Tasks.Task<bool> EditHairstyleAsync(int StyleID, ResBarbers.MainServiceReference.MenuItem Hairstyle) {
+            return base.Channel.EditHairstyleAsync(StyleID, Hairstyle);
         }
     }
 }

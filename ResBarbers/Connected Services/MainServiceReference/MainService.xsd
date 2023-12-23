@@ -75,6 +75,7 @@
   <xs:element name="EditHairstyle">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="StyleID" type="xs:int" />
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="Hairstyle" nillable="true" type="q3:MenuItem" />
       </xs:sequence>
     </xs:complexType>

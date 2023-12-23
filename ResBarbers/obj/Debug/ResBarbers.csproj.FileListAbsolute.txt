@@ -52,8 +52,8 @@ C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\bin\roslyn\VBCSCom
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.csproj.AssemblyReference.cache
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.csproj.CoreCompileInputs.cache
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.csproj.CopyComplete
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.dll
 C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.pdb
+C:\Users\tokel\Desktop\Projects\Profile\ResBarbers\ResBarbers\obj\Debug\ResBarbers.csproj.AssemblyReference.cache

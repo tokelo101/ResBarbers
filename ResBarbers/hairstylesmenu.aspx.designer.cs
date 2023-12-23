@@ -15,49 +15,58 @@ namespace ResBarbers
     {
 
         /// <summary>
-        /// Button1 control.
+        /// btnTest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnTest;
 
         /// <summary>
-        /// sname control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText sname;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
 
         /// <summary>
-        /// description control.
+        /// Add_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText description;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Add_name;
 
         /// <summary>
-        /// price control.
+        /// Add_description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText price;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Add_description;
 
         /// <summary>
-        /// image control.
+        /// Add_price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile image;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Add_price;
+
+        /// <summary>
+        /// Add_image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile Add_image;
 
         /// <summary>
         /// btnAdd control.
