@@ -65,9 +65,6 @@ namespace ResBarbers.MainServiceReference {
         private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.MenuItem[] MenuItemsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PassPhraseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -296,19 +293,6 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.MenuItem[] MenuItems {
-            get {
-                return this.MenuItemsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MenuItemsField, value) != true)) {
-                    this.MenuItemsField = value;
-                    this.RaisePropertyChanged("MenuItems");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PassPhrase {
             get {
                 return this.PassPhraseField;
@@ -505,9 +489,6 @@ namespace ResBarbers.MainServiceReference {
         private int ClientIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.MenuItem MenuItemField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StyleIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -613,19 +594,6 @@ namespace ResBarbers.MainServiceReference {
                 if ((this.ClientIDField.Equals(value) != true)) {
                     this.ClientIDField = value;
                     this.RaisePropertyChanged("ClientID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.MenuItem MenuItem {
-            get {
-                return this.MenuItemField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MenuItemField, value) != true)) {
-                    this.MenuItemField = value;
-                    this.RaisePropertyChanged("MenuItem");
                 }
             }
         }
@@ -1062,163 +1030,6 @@ namespace ResBarbers.MainServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MenuItem", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
-    [System.SerializableAttribute()]
-    public partial class MenuItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Appointment[] AppointmentsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BarberIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StyleDescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StyleIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StyleImageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StyleNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal StylePriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Appointment[] Appointments {
-            get {
-                return this.AppointmentsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AppointmentsField, value) != true)) {
-                    this.AppointmentsField = value;
-                    this.RaisePropertyChanged("Appointments");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BarberID {
-            get {
-                return this.BarberIDField;
-            }
-            set {
-                if ((this.BarberIDField.Equals(value) != true)) {
-                    this.BarberIDField = value;
-                    this.RaisePropertyChanged("BarberID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StyleDescription {
-            get {
-                return this.StyleDescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StyleDescriptionField, value) != true)) {
-                    this.StyleDescriptionField = value;
-                    this.RaisePropertyChanged("StyleDescription");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StyleID {
-            get {
-                return this.StyleIDField;
-            }
-            set {
-                if ((this.StyleIDField.Equals(value) != true)) {
-                    this.StyleIDField = value;
-                    this.RaisePropertyChanged("StyleID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StyleImage {
-            get {
-                return this.StyleImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StyleImageField, value) != true)) {
-                    this.StyleImageField = value;
-                    this.RaisePropertyChanged("StyleImage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StyleName {
-            get {
-                return this.StyleNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StyleNameField, value) != true)) {
-                    this.StyleNameField = value;
-                    this.RaisePropertyChanged("StyleName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal StylePrice {
-            get {
-                return this.StylePriceField;
-            }
-            set {
-                if ((this.StylePriceField.Equals(value) != true)) {
-                    this.StylePriceField = value;
-                    this.RaisePropertyChanged("StylePrice");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_ {
-            get {
-                return this.USER_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
-                    this.USER_Field = value;
-                    this.RaisePropertyChanged("USER_");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Review", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
     [System.SerializableAttribute()]
     public partial class Review : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1376,6 +1187,131 @@ namespace ResBarbers.MainServiceReference {
                 if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
                     this.USER_1Field = value;
                     this.RaisePropertyChanged("USER_1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MenuItem", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class MenuItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StyleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StyleNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal StylePriceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleDescription {
+            get {
+                return this.StyleDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleDescriptionField, value) != true)) {
+                    this.StyleDescriptionField = value;
+                    this.RaisePropertyChanged("StyleDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StyleID {
+            get {
+                return this.StyleIDField;
+            }
+            set {
+                if ((this.StyleIDField.Equals(value) != true)) {
+                    this.StyleIDField = value;
+                    this.RaisePropertyChanged("StyleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleImage {
+            get {
+                return this.StyleImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleImageField, value) != true)) {
+                    this.StyleImageField = value;
+                    this.RaisePropertyChanged("StyleImage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StyleName {
+            get {
+                return this.StyleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StyleNameField, value) != true)) {
+                    this.StyleNameField = value;
+                    this.RaisePropertyChanged("StyleName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal StylePrice {
+            get {
+                return this.StylePriceField;
+            }
+            set {
+                if ((this.StylePriceField.Equals(value) != true)) {
+                    this.StylePriceField = value;
+                    this.RaisePropertyChanged("StylePrice");
                 }
             }
         }

@@ -5,13 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <%--<div class="container-fluid">--%>
         <%-- Catalogue --%>
 
-        <div class="row" runat="server">
-            <h1>Your Hairstyle Catalogue</h1>
-            <asp:Button ID="btnTest" runat="server" Text="Test" OnClick="OnTest" class="btn btn-dark" />
-        </div>
         <div class="row no-gutters justify-content-center" runat="server">
 
             <%-- The Filter Cards--%>
@@ -356,7 +351,6 @@
 
             
         </div>
-    <%--</div>--%>
 
 
 

@@ -17,7 +17,6 @@
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MenuItems" nillable="true" type="tns:ArrayOfMenuItem" />
       <xs:element minOccurs="0" name="PassPhrase" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
@@ -48,7 +47,6 @@
       <xs:element minOccurs="0" name="BarberID" type="xs:int" />
       <xs:element minOccurs="0" name="ClientBarberHistories" nillable="true" type="tns:ArrayOfClientBarberHistory" />
       <xs:element minOccurs="0" name="ClientID" type="xs:int" />
-      <xs:element minOccurs="0" name="MenuItem" nillable="true" type="tns:MenuItem" />
       <xs:element minOccurs="0" name="StyleID" type="xs:int" />
       <xs:element minOccurs="0" name="USER_" nillable="true" type="tns:USER_" />
       <xs:element minOccurs="0" name="USER_1" nillable="true" type="tns:USER_" />
@@ -102,29 +100,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Review" nillable="true" type="tns:Review" />
-  <xs:complexType name="MenuItem">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Appointments" nillable="true" type="tns:ArrayOfAppointment" />
-      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-      <xs:element minOccurs="0" name="StyleDescription" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StyleID" type="xs:int" />
-      <xs:element minOccurs="0" name="StyleImage" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StylePrice" type="xs:decimal" />
-      <xs:element minOccurs="0" name="USER_" nillable="true" type="tns:USER_" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="MenuItem" nillable="true" type="tns:MenuItem" />
-  <xs:complexType name="ArrayOfMenuItem">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuItem" nillable="true" type="tns:MenuItem" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfMenuItem" nillable="true" type="tns:ArrayOfMenuItem" />
   <xs:complexType name="ArrayOfReview">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Review" nillable="true" type="tns:Review" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfReview" nillable="true" type="tns:ArrayOfReview" />
+  <xs:complexType name="MenuItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleID" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleImage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StylePrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuItem" nillable="true" type="tns:MenuItem" />
 </xs:schema>
