@@ -12,32 +12,19 @@ namespace ResBarbers
     {
         MainServiceClient SR = new MainServiceClient();
 
-        ////Register Page
-        //private string UserID;
-        //private string FirstName;
-        //private string LastName;
+
         private DateTime UserDOB;
-        //private string Email;
-        //private string Phone;
-        //private string University;
-        //private string Campus;
-        //private string Province;
-        //private string City;
-        //private string ResidenceName;
-        //private string Addressline1;
-        //private string Addressline2;
-        //private string Addressline3;
-        //private string UserType;
-        ////Profile Page
-        //private string UserPicture;
-        //private string UserName;
-        //private string About;
-        //private string PassPhrase;
+        private string UserType = "Client"; //Client set to Default UserType
+        
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Request.QueryString["UserType"] != null)
+            {
+                UserType = Request.QueryString["UserType"].ToString();
+
+            }
         }
 
         protected void calendarDate_SelectionChanged(object sender, EventArgs e)
@@ -65,7 +52,7 @@ namespace ResBarbers
             Session["Addressline1"] = address1.Value;
             Session["Addressline2"] = address2.Value;
             Session["Addressline3"] = address3.Value;
-
+            Session["UserType"] = UserType;
 
 
             Response.Redirect("register_profile.aspx");

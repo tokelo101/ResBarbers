@@ -117,4 +117,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MenuItem" nillable="true" type="tns:MenuItem" />
+  <xs:complexType name="ArrayOfMenuItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuItem" nillable="true" type="tns:MenuItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuItem" nillable="true" type="tns:ArrayOfMenuItem" />
 </xs:schema>
