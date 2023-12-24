@@ -36,11 +36,11 @@ namespace ResBarbers
 
             var hairstyle = new MenuItem
             {
-              BarberID = 1,
-              StyleName = Add_name.Value,
-              StyleDescription = Add_description.Value,
-              StylePrice = Decimal.Parse(Add_price.Value),
-              StyleImage = Add_image.Value
+                BarberID = int.Parse(Session["UserID"].ToString()),
+                StyleName = Add_name.Value,
+                StyleDescription = Add_description.Value,
+                StylePrice = Decimal.Parse(Add_price.Value),
+                StyleImage = Add_image.Value
             };
 
             bool Added = SR.AddHairstyle(hairstyle);
