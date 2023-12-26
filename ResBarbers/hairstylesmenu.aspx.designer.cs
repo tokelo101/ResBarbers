@@ -24,6 +24,42 @@ namespace ResBarbers
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl haircut;
 
         /// <summary>
+        /// Edt_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Edt_name;
+
+        /// <summary>
+        /// Edt_description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Edt_description;
+
+        /// <summary>
+        /// Edt_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Edt_price;
+
+        /// <summary>
+        /// Edt_image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile Edt_image;
+
+        /// <summary>
         /// btnEdit control.
         /// </summary>
         /// <remarks>

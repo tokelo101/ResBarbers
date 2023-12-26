@@ -88,7 +88,7 @@
 
                 <div class="container-fluid">
 
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" id="frmSeach" type="search" placeholder="Search" aria-label="Search">
                     <%--<asp:Button ID="btnSearch" runat="server" class="btn btn-outline-dark" type="submit" Text="Search" OnClick="OnSearch" />--%>
                 </div>
             </div>

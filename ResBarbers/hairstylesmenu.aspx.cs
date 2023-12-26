@@ -12,9 +12,32 @@ namespace ResBarbers
     public partial class hairstylesmenu : System.Web.UI.Page
     {
         MainServiceClient SR = new MainServiceClient();
-
+      
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            if (Request.QueryString["StyleID"]!=null)
+            {
+                string Action = Request.QueryString["Action"].ToString();
+                switch(Action){
+                    case "Edit":
+                        {
+                        if (!IsPostBack)
+                            {
+                                //hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit
+                                // Call the JavaScript method after the page has finished loading
+                                string script = "<script type='text/javascript'>openPopup('EditHaircutForm');</script>";
+                             ClientScript.RegisterStartupScript(this.GetType(), "MyStartupScript", script);
+                            }
+                        }
+                        break;
+                    case "Delete":
+                        {
+
+                        }break;
+                }
+            } 
 
             if (Session["UserID"] != null)
             {
@@ -31,14 +54,14 @@ namespace ResBarbers
                        <div class='media-body'>
 
                         <div class='item'>
-                        <div class='item_pic  set-bg' data-setbg={m.StyleImage}>
-                            <a href = '#?ID='>
+                        <div class='item_pic'>
+                            <a href='#'>
                                 <img src={m.StyleImage} class='w-50 h-100' alt=''></a>
 
                             <ul class='item_hover'>
-                                <li><a href ='#' onclick='openPopup('EditHaircutForm')'>
-                                    <img src='images/bootstrap-icons-1.11.2/pencil.svg' alt='edit' data-bs-toggle='tooltip' data-bs-placement='top' title='Edit'></a></li>
-                                <li><a href = '#' >
+                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit' onclick='openPopup('EditHaircutForm')'>
+                                          <img src='images/bootstrap-icons-1.11.2/pencil.svg' alt='edit' data-bs-toggle='tooltip' data-bs-placement='top' title='Edit'></a></li>
+                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Delete' onclick='OnDelete'>
                                     <img src='images/bootstrap-icons-1.11.2/trash.svg' alt='remove' data-bs-toggle='tooltip' data-bs-placement='top' title='Remove'></a></li>
 
                             </ul>
@@ -69,30 +92,11 @@ namespace ResBarbers
                 //Make an Alert
             }
 
-
-
-
-
-
-
-
-
         }
-        protected void OnTest(object sender, EventArgs e)
-        {
-
-            Response.Redirect("index.aspx");
-        }
-
-        protected void OnLogin(object sender, EventArgs e)
-        {
-
-            Response.Redirect("index.aspx");
-        }
+    
 
         protected void OnAdd(object sender, EventArgs e)
         {
-
 
             var hairstyle = new MenuItem
             {
@@ -107,6 +111,7 @@ namespace ResBarbers
 
             if (Added.Equals(true))
             {
+                //TODO: Make an alert ...remove the redirect 
                 Response.Redirect("index.aspx");
 
             }
@@ -115,9 +120,8 @@ namespace ResBarbers
                 Response.Redirect("hairstylesmenu.aspx");
             }
 
-
         }
-
+        
         protected void OnEdit(object sender, EventArgs e)
         {
             bool Edited = false;
@@ -125,12 +129,13 @@ namespace ResBarbers
             {
             int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
 
-                var hairstyle = new MainServiceReference.MenuItem
+                
+                var hairstyle = new MenuItem
                 {
-                    //StyleName = sname.Value,
-                    //StyleDescription = description.Value,
-                    //StylePrice = Decimal.Parse(price.Value),
-                    //StyleImage = image.Value
+                    StyleName = Edt_name.Value,
+                    StyleDescription = Edt_description.Value,
+                    StylePrice = Decimal.Parse(Edt_price.Value),
+                    StyleImage = Edt_image.Value
                 };
                 Edited = SR.EditHairstyle(StyleID, hairstyle);
 
@@ -146,7 +151,7 @@ namespace ResBarbers
             if (Edited.Equals(true))
             {
                 //alert
-                Response.Redirect("index.aspx");
+                Response.Redirect("hairstylesmenu.aspx");
 
             }
             else
@@ -160,7 +165,42 @@ namespace ResBarbers
 
         protected void OnDelete(object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            bool Deleted = false;
+            if (Request.QueryString["StyleID"] != null)
+            {
+                int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
+
+
+                var hairstyle = new MenuItem
+                {
+                    StyleName = Edt_name.Value,
+                    StyleDescription = Edt_description.Value,
+                    StylePrice = Decimal.Parse(Edt_price.Value),
+                    StyleImage = Edt_image.Value
+                };
+                Deleted = SR.EditHairstyle(StyleID, hairstyle);
+
+            }
+            else
+            {
+                //Problems with URL Parameters
+            }
+
+
+
+
+            if (Deleted.Equals(true))
+            {
+                //alert
+                Response.Redirect("hairstylesmenu.aspx");
+
+            }
+            else
+            {
+                //alert
+                Response.Redirect("index.aspx");
+
+            }
 
         }
     }
