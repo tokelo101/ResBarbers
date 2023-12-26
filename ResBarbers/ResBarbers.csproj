@@ -80,6 +80,7 @@
     <Content Include="barberview.aspx" />
     <Content Include="barber_appointments.aspx" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="deleteMenuItem.aspx" />
     <Content Include="hairstyles.aspx" />
     <Content Include="hairstylesmenu.aspx" />
     <Content Include="hairstyleview.aspx" />
@@ -152,6 +153,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMenuItem.aspx.cs">
+      <DependentUpon>deleteMenuItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMenuItem.aspx.designer.cs">
+      <DependentUpon>deleteMenuItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="hairstyles.aspx.cs">
       <DependentUpon>hairstyles.aspx</DependentUpon>

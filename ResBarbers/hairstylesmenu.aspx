@@ -70,34 +70,32 @@
                     <%--Haircuts items Dynamical Populated --%>
                 
 
+         </div>
+           
+        </div>
 
-                <!-- The 'Edit Haircut' pop-up form -->
+        <div class="row no-gutters justify-content-center" runat="server">
+            
+            <!-- The 'Edit Haircut' pop-up form -->
                 <div id="EditHaircutForm" class="RequestPopUp">
                     <div class="popup-content">
                         <span class="close" onclick="closePopup('EditHaircutForm')">&times;</span>
                         <h3>Edit Haircut</h3>
                         <div class="form-edit">
                             <label for="name">Name</label>
-                            <input class="form-control" name="name" type="text" id="Edt_name"/>
+                            <input class="form-control" name="name" type="text" id="Edt_name" runat="server"/>
                             <label for="description">Description</label>
-                            <input class="form-control" name="description" type="text" id="Edt_description"/>
+                            <input class="form-control" name="description" type="text" id="Edt_description" runat="server"/>
                             <label for="price">Price</label>
-                            <input class="form-control" name="price" type="text" id="Edt_price"/>
+                            <input class="form-control" name="price" type="text" id="Edt_price" runat="server"/>
                             <label for="image">Image</label>
-                            <input class="form-control" name="image" type="file" id="Edt_image"/>
+                            <input class="form-control" name="image" type="file" id="Edt_image" runat="server"/>
                             <br>
                             <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="OnEdit" class="btn btn-light" />
                         </div>
                     </div>
                 </div>
 
-
-            </div>
-           
-        </div>
-
-        <div class="row no-gutters justify-content-center" runat="server">
-            
             <div class="col-lg-8">
                 <%--openPopup('AddHaircutForm')--%>
                 <div class="btnAddContainer" >
@@ -135,13 +133,10 @@
 
     <%-- Script for the pop-up form --%>
     <script>
-        function OnTest() {
-            console.log("Testing");
-        }
 
         // Function to open the 'Add Haircut' pop-up form
         function openPopup(id) {
-            document.getElementById(id).style.display = 'block';
+                document.getElementById(id).style.display = 'block';
         }
 
         // Function to close the 'Add Haircut' pop-up form
