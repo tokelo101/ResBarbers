@@ -34,7 +34,7 @@ namespace ResBarbers
                         break;
                     case "Delete":
                         {
-
+                            Response.Redirect("deleteMenuItem.aspx");
                         }break;
                 }
             } 
@@ -59,9 +59,9 @@ namespace ResBarbers
                                 <img src={m.StyleImage} class='w-50 h-100' alt=''></a>
 
                             <ul class='item_hover'>
-                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit' onclick='openPopup('EditHaircutForm')'>
+                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit'>
                                           <img src='images/bootstrap-icons-1.11.2/pencil.svg' alt='edit' data-bs-toggle='tooltip' data-bs-placement='top' title='Edit'></a></li>
-                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Delete' onclick='OnDelete'>
+                                <li><a href='deleteMenuItem.aspx?StyleID={m.StyleID}'>
                                     <img src='images/bootstrap-icons-1.11.2/trash.svg' alt='remove' data-bs-toggle='tooltip' data-bs-placement='top' title='Remove'></a></li>
 
                             </ul>
@@ -165,42 +165,7 @@ namespace ResBarbers
 
         protected void OnDelete(object sender, EventArgs e)
         {
-            bool Deleted = false;
-            if (Request.QueryString["StyleID"] != null)
-            {
-                int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
-
-
-                var hairstyle = new MenuItem
-                {
-                    StyleName = Edt_name.Value,
-                    StyleDescription = Edt_description.Value,
-                    StylePrice = Decimal.Parse(Edt_price.Value),
-                    StyleImage = Edt_image.Value
-                };
-                Deleted = SR.EditHairstyle(StyleID, hairstyle);
-
-            }
-            else
-            {
-                //Problems with URL Parameters
-            }
-
-
-
-
-            if (Deleted.Equals(true))
-            {
-                //alert
-                Response.Redirect("hairstylesmenu.aspx");
-
-            }
-            else
-            {
-                //alert
-                Response.Redirect("index.aspx");
-
-            }
+            
 
         }
     }
