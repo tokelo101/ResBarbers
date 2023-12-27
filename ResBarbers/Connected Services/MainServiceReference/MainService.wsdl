@@ -43,6 +43,12 @@
   <wsdl:message name="IMainService_EditHairstyle_OutputMessage">
     <wsdl:part name="parameters" element="tns:EditHairstyleResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_GetHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHairstyleResponse" />
+  </wsdl:message>
   <wsdl:message name="IMainService_GetBarberHairstyles_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBarberHairstyles" />
   </wsdl:message>
@@ -73,6 +79,10 @@
     <wsdl:operation name="EditHairstyle">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/EditHairstyle" message="tns:IMainService_EditHairstyle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/EditHairstyleResponse" message="tns:IMainService_EditHairstyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetHairstyle" message="tns:IMainService_GetHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetHairstyleResponse" message="tns:IMainService_GetHairstyle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetBarberHairstyles">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetBarberHairstyles" message="tns:IMainService_GetBarberHairstyles_InputMessage" />
@@ -128,6 +138,15 @@
     </wsdl:operation>
     <wsdl:operation name="EditHairstyle">
       <soap:operation soapAction="http://tempuri.org/IMainService/EditHairstyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetHairstyle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

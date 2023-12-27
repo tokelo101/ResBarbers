@@ -23,7 +23,22 @@ namespace ResBarbers
                 switch(Action){
                     case "Edit":
                         {
-                        if (!IsPostBack)
+                            int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
+
+                            var oldhairstyle = SR.GetHairstyle(StyleID);
+
+                            string name = oldhairstyle.StyleName;
+                            string descritpion = oldhairstyle.StyleDescription;
+                            decimal price = oldhairstyle.StylePrice;
+                            string image = oldhairstyle.StyleImage;
+                            
+
+
+                            Edt_name.Value = name;
+                            Edt_description.Value = descritpion;
+                            Edt_price.Value = price.ToString();
+                            //Edt_image.Value = image;
+                            if (!IsPostBack)
                             {
                                 //hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit
                                 // Call the JavaScript method after the page has finished loading
@@ -42,13 +57,15 @@ namespace ResBarbers
             if (Session["UserID"] != null)
             {
                 int UserID = int.Parse(Session["UserID"].ToString());
-                var hairstyles = SR.GetBarberHairstyles(UserID);
+                IEnumerable<dynamic> hairstyles = SR.GetBarberHairstyles(UserID);
 
                 string display = "";
 
-                foreach(MenuItem m in hairstyles)
-                {
-                display += $@"
+                if (hairstyles!=null) {
+                     
+                    foreach (MenuItem m in hairstyles)
+                    {
+                        display += $@"
                     <div class='col-lg-4 col-md-6 col-sm-6'>
 
                        <div class='media-body'>
@@ -72,7 +89,7 @@ namespace ResBarbers
                         <h2>{m.StyleName}</h2>
                         <p>{m.StyleDescription}</p>
 
-                        <h3>R{m.StylePrice}</h3>
+                        <h3>R{m.StylePrice.ToString("0.00")}</h3>
 
                         <div class='rating'>
                             <i class='fa fa-star-o'><img src='images/bootstrap-icons-1.11.2/heart-fill.svg'/></i>
@@ -83,13 +100,18 @@ namespace ResBarbers
                     </div>
                     </div>
                 </div>";
+                    }
+                }
+                else
+                {
+                    display = "<h1>You have no Menu Items</h1>";
                 }
 
                 haircut.InnerHtml = display;
             }
             else
             {
-                //Make an Alert
+                //Make an Alert (Please Log in First)
             }
 
         }
@@ -97,6 +119,8 @@ namespace ResBarbers
 
         protected void OnAdd(object sender, EventArgs e)
         {
+            int UserID = int.Parse(Session["UserID"].ToString());
+
 
             var hairstyle = new MenuItem
             {
@@ -104,7 +128,7 @@ namespace ResBarbers
                 StyleName = Add_name.Value,
                 StyleDescription = Add_description.Value,
                 StylePrice = Decimal.Parse(Add_price.Value),
-                StyleImage = "images/Haircuts/Male/" + Add_image.Value
+                StyleImage = "images/Haircuts/" + Add_image.Value
             };
 
             bool Added = SR.AddHairstyle(hairstyle);
@@ -112,7 +136,7 @@ namespace ResBarbers
             if (Added.Equals(true))
             {
                 //TODO: Make an alert ...remove the redirect 
-                Response.Redirect("index.aspx");
+                Response.Redirect("hairstylesmenu.aspx?UserID="+UserID);
 
             }
             else
@@ -128,14 +152,14 @@ namespace ResBarbers
             if (Request.QueryString["StyleID"] != null)
             {
             int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
-
                 
+
                 var hairstyle = new MenuItem
                 {
                     StyleName = Edt_name.Value,
                     StyleDescription = Edt_description.Value,
                     StylePrice = Decimal.Parse(Edt_price.Value),
-                    StyleImage = Edt_image.Value
+                    StyleImage = "images/Haircuts/" + Edt_image.Value
                 };
                 Edited = SR.EditHairstyle(StyleID, hairstyle);
 
