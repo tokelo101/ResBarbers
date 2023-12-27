@@ -26,7 +26,7 @@ namespace ResBarbers
             {
                 display += $@" 
                            <div class='barber-view' runat='server'>
-                            <a href='barberview.aspx'><img src={u.UserPicture} alt ='Profile Picture'></a>
+                            <a href='barberview.aspx?BarberID={u.UserID}'><img src={u.UserPicture} alt ='Profile Picture'></a>
 
                             <div class='barber-view-content'>
                             <h3>{u.UserName} </h3>

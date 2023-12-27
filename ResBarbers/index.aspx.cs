@@ -51,7 +51,7 @@ namespace ResBarbers
                                 <img src={m.StyleImage} class='w-50 h-100' alt=''></a>
 
                             <ul class='item_hover'>
-                                <li><a href='barberview.aspx?=StyleID{m.StyleID}&&BarberID={m.BarberID}'>
+                                <li><a href='barberview.aspx?StyleID={m.StyleID}&&BarberID={m.BarberID}'>
                                           <img src='images/bootstrap-icons-1.11.2/eye.svg' alt='view' data-bs-toggle='tooltip' data-bs-placement='top' title='View'></a></li>
                                 <li><a href='index.aspx?StyleID={m.StyleID}'>
                                     <img src='images/bootstrap-icons-1.11.2/bell.svg' alt='request' data-bs-toggle='tooltip' data-bs-placement='top' title='Request'></a></li>
