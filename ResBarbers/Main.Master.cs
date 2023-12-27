@@ -17,7 +17,7 @@ namespace ResBarbers
                 //General
                 string logout = "hidden";
                 string login = "";
-
+                
                 //Barbers
                 string Barber_appointments = "hidden";
                 string Requests = "hidden";
@@ -65,7 +65,7 @@ namespace ResBarbers
                         <a class='nav-link active' href='index.aspx'>Home</a>
                     </li>
                     <li class='nav-item dropdown'>
-                        <a class='nav-link dropdown-toggle' href='#' id='navbarRegister' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                        <a class='nav-link dropdown-toggle' href='#' id='navbarRegister' role='button' data-bs-toggle='dropdown' aria-expanded='false' {login}>
                         Register
                         </a>
                         <ul class='dropdown-menu dropdown-menu-dark' aria-labelledby='navbarDarkDropdownMenuLink'>

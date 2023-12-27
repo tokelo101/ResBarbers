@@ -123,4 +123,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMenuItem" nillable="true" type="tns:ArrayOfMenuItem" />
+  <xs:complexType name="ArrayOfUSER_">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USER_" nillable="true" type="tns:USER_" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSER_" nillable="true" type="tns:ArrayOfUSER_" />
 </xs:schema>
