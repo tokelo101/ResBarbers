@@ -55,6 +55,12 @@
   <wsdl:message name="IMainService_GetBarberHairstyles_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBarberHairstylesResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_GetAllHairstyles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHairstyles" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAllHairstyles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHairstylesResponse" />
+  </wsdl:message>
   <wsdl:message name="IMainService_GetUser_InputMessage">
     <wsdl:part name="parameters" element="tns:GetUser" />
   </wsdl:message>
@@ -99,6 +105,10 @@
     <wsdl:operation name="GetBarberHairstyles">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetBarberHairstyles" message="tns:IMainService_GetBarberHairstyles_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetBarberHairstylesResponse" message="tns:IMainService_GetBarberHairstyles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHairstyles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetAllHairstyles" message="tns:IMainService_GetAllHairstyles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetAllHairstylesResponse" message="tns:IMainService_GetAllHairstyles_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetUser" message="tns:IMainService_GetUser_InputMessage" />
@@ -176,6 +186,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetBarberHairstyles">
       <soap:operation soapAction="http://tempuri.org/IMainService/GetBarberHairstyles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHairstyles">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetAllHairstyles" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -115,6 +115,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllHairstyles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHairstylesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetAllHairstylesResult" nillable="true" type="q6:ArrayOfMenuItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetUser">
     <xs:complexType>
       <xs:sequence>
@@ -125,7 +137,7 @@
   <xs:element name="GetUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetUserResult" nillable="true" type="q6:USER_" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetUserResult" nillable="true" type="q7:USER_" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -139,7 +151,7 @@
   <xs:element name="GetUsersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetUsersResult" nillable="true" type="q7:ArrayOfUSER_" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetUsersResult" nillable="true" type="q8:ArrayOfUSER_" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
