@@ -87,6 +87,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetHairstyle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StyleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHairstyleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetHairstyleResult" nillable="true" type="q4:MenuItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetBarberHairstyles">
     <xs:complexType>
       <xs:sequence>
@@ -97,7 +111,7 @@
   <xs:element name="GetBarberHairstylesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetBarberHairstylesResult" nillable="true" type="q4:ArrayOfMenuItem" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetBarberHairstylesResult" nillable="true" type="q5:ArrayOfMenuItem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
