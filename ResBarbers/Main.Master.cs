@@ -9,6 +9,7 @@ namespace ResBarbers
 {
     public partial class Main : System.Web.UI.MasterPage
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string userType = "";
@@ -107,17 +108,9 @@ namespace ResBarbers
                 </div>
             </div>";
 
-
-
-
                 navBarMain.InnerHtml = Navdisplay; 
 
-
-
-
-            
             }
-
         }
 
         protected void OnSearch(object sender, EventArgs e)
