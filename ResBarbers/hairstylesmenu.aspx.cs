@@ -12,27 +12,91 @@ namespace ResBarbers
     public partial class hairstylesmenu : System.Web.UI.Page
     {
         MainServiceClient SR = new MainServiceClient();
-
+      
         protected void Page_Load(object sender, EventArgs e)
         {
 
 
-        }
-        protected void OnTest(object sender, EventArgs e)
-        {
+            if (Request.QueryString["StyleID"]!=null)
+            {
+                string Action = Request.QueryString["Action"].ToString();
+                switch(Action){
+                    case "Edit":
+                        {
+                        if (!IsPostBack)
+                            {
+                                //hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit
+                                // Call the JavaScript method after the page has finished loading
+                                string script = "<script type='text/javascript'>openPopup('EditHaircutForm');</script>";
+                             ClientScript.RegisterStartupScript(this.GetType(), "MyStartupScript", script);
+                            }
+                        }
+                        break;
+                    case "Delete":
+                        {
+                            Response.Redirect("deleteMenuItem.aspx");
+                        }break;
+                }
+            } 
 
-            Response.Redirect("index.aspx");
-        }
+            if (Session["UserID"] != null)
+            {
+                int UserID = int.Parse(Session["UserID"].ToString());
+                var hairstyles = SR.GetBarberHairstyles(UserID);
 
-        protected void OnLogin(object sender, EventArgs e)
-        {
+                string display = "";
 
-            Response.Redirect("index.aspx");
+                foreach(MenuItem m in hairstyles)
+                {
+                display += $@"
+                    <div class='col-lg-4 col-md-6 col-sm-6'>
+
+                       <div class='media-body'>
+
+                        <div class='item'>
+                        <div class='item_pic'>
+                            <a href='#'>
+                                <img src={m.StyleImage} class='w-50 h-100' alt=''></a>
+
+                            <ul class='item_hover'>
+                                <li><a href='hairstylesmenu.aspx?StyleID={m.StyleID}&&Action=Edit'>
+                                          <img src='images/bootstrap-icons-1.11.2/pencil.svg' alt='edit' data-bs-toggle='tooltip' data-bs-placement='top' title='Edit'></a></li>
+                                <li><a href='deleteMenuItem.aspx?StyleID={m.StyleID}'>
+                                    <img src='images/bootstrap-icons-1.11.2/trash.svg' alt='remove' data-bs-toggle='tooltip' data-bs-placement='top' title='Remove'></a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class='item_text'>
+                        <h2>{m.StyleName}</h2>
+                        <p>{m.StyleDescription}</p>
+
+                        <h3>R{m.StylePrice}</h3>
+
+                        <div class='rating'>
+                            <i class='fa fa-star-o'><img src='images/bootstrap-icons-1.11.2/heart-fill.svg'/></i>
+                            <i class='fa fa-star-o'><img src='images/bootstrap-icons-1.11.2/heart-fill.svg'/></i>
+                            <i class='fa fa-star-o'><img src='images/bootstrap-icons-1.11.2/heart-fill.svg'/></i>
+                            <i class='fa fa-star-o'><img src='images/bootstrap-icons-1.11.2/heart-half.svg'/></i>
+                        </div>
+                    </div>
+                    </div>
+                </div>";
+                }
+
+                haircut.InnerHtml = display;
+            }
+            else
+            {
+                //Make an Alert
+            }
+
         }
+    
 
         protected void OnAdd(object sender, EventArgs e)
         {
-
 
             var hairstyle = new MenuItem
             {
@@ -40,13 +104,14 @@ namespace ResBarbers
                 StyleName = Add_name.Value,
                 StyleDescription = Add_description.Value,
                 StylePrice = Decimal.Parse(Add_price.Value),
-                StyleImage = Add_image.Value
+                StyleImage = "images/Haircuts/Male/" + Add_image.Value
             };
 
             bool Added = SR.AddHairstyle(hairstyle);
 
             if (Added.Equals(true))
             {
+                //TODO: Make an alert ...remove the redirect 
                 Response.Redirect("index.aspx");
 
             }
@@ -55,9 +120,8 @@ namespace ResBarbers
                 Response.Redirect("hairstylesmenu.aspx");
             }
 
-
         }
-
+        
         protected void OnEdit(object sender, EventArgs e)
         {
             bool Edited = false;
@@ -65,12 +129,13 @@ namespace ResBarbers
             {
             int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
 
-                var hairstyle = new MainServiceReference.MenuItem
+                
+                var hairstyle = new MenuItem
                 {
-                    //StyleName = sname.Value,
-                    //StyleDescription = description.Value,
-                    //StylePrice = Decimal.Parse(price.Value),
-                    //StyleImage = image.Value
+                    StyleName = Edt_name.Value,
+                    StyleDescription = Edt_description.Value,
+                    StylePrice = Decimal.Parse(Edt_price.Value),
+                    StyleImage = Edt_image.Value
                 };
                 Edited = SR.EditHairstyle(StyleID, hairstyle);
 
@@ -86,7 +151,7 @@ namespace ResBarbers
             if (Edited.Equals(true))
             {
                 //alert
-                Response.Redirect("index.aspx");
+                Response.Redirect("hairstylesmenu.aspx");
 
             }
             else
@@ -100,7 +165,7 @@ namespace ResBarbers
 
         protected void OnDelete(object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            
 
         }
     }
