@@ -1377,6 +1377,18 @@ namespace ResBarbers.MainServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetBarberHairstyles", ReplyAction="http://tempuri.org/IMainService/GetBarberHairstylesResponse")]
         System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetBarberHairstylesAsync(int BarberID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUser", ReplyAction="http://tempuri.org/IMainService/GetUserResponse")]
+        ResBarbers.MainServiceReference.USER_ GetUser(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUser", ReplyAction="http://tempuri.org/IMainService/GetUserResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_> GetUserAsync(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUsers", ReplyAction="http://tempuri.org/IMainService/GetUsersResponse")]
+        ResBarbers.MainServiceReference.USER_[] GetUsers(string UserType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUsers", ReplyAction="http://tempuri.org/IMainService/GetUsersResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1468,6 +1480,22 @@ namespace ResBarbers.MainServiceReference {
         
         public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetBarberHairstylesAsync(int BarberID) {
             return base.Channel.GetBarberHairstylesAsync(BarberID);
+        }
+        
+        public ResBarbers.MainServiceReference.USER_ GetUser(int UserID) {
+            return base.Channel.GetUser(UserID);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_> GetUserAsync(int UserID) {
+            return base.Channel.GetUserAsync(UserID);
+        }
+        
+        public ResBarbers.MainServiceReference.USER_[] GetUsers(string UserType) {
+            return base.Channel.GetUsers(UserType);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType) {
+            return base.Channel.GetUsersAsync(UserType);
         }
     }
 }
