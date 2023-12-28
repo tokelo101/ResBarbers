@@ -7,12 +7,8 @@
       <xs:element minOccurs="0" name="Addressline1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Addressline2" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Addressline3" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Appointments" nillable="true" type="tns:ArrayOfAppointment" />
-      <xs:element minOccurs="0" name="Appointments1" nillable="true" type="tns:ArrayOfAppointment" />
       <xs:element minOccurs="0" name="Campus" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ClientBarberHistories" nillable="true" type="tns:ArrayOfClientBarberHistory" />
-      <xs:element minOccurs="0" name="ClientBarberHistories1" nillable="true" type="tns:ArrayOfClientBarberHistory" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
@@ -21,8 +17,6 @@
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ResidenceName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Reviews" nillable="true" type="tns:ArrayOfReview" />
-      <xs:element minOccurs="0" name="Reviews1" nillable="true" type="tns:ArrayOfReview" />
       <xs:element minOccurs="0" name="University" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserDOB" type="xs:dateTime" />
       <xs:element minOccurs="0" name="UserID" type="xs:int" />
@@ -32,80 +26,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="USER_" nillable="true" type="tns:USER_" />
-  <xs:complexType name="ArrayOfAppointment">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Appointment" nillable="true" type="tns:Appointment" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAppointment" nillable="true" type="tns:ArrayOfAppointment" />
-  <xs:complexType name="Appointment">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AppointmentDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="AppointmentID" type="xs:int" />
-      <xs:element minOccurs="0" name="AppointmentStatus" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="AppointmentTime" type="ser:duration" />
-      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-      <xs:element minOccurs="0" name="ClientBarberHistories" nillable="true" type="tns:ArrayOfClientBarberHistory" />
-      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
-      <xs:element minOccurs="0" name="StyleID" type="xs:int" />
-      <xs:element minOccurs="0" name="USER_" nillable="true" type="tns:USER_" />
-      <xs:element minOccurs="0" name="USER_1" nillable="true" type="tns:USER_" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Appointment" nillable="true" type="tns:Appointment" />
-  <xs:complexType name="ArrayOfClientBarberHistory">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientBarberHistory" nillable="true" type="tns:ClientBarberHistory" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfClientBarberHistory" nillable="true" type="tns:ArrayOfClientBarberHistory" />
-  <xs:complexType name="ClientBarberHistory">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Appointment" nillable="true" type="tns:Appointment" />
-      <xs:element minOccurs="0" name="AppointmentDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="AppointmentID" type="xs:int" />
-      <xs:element minOccurs="0" name="AppointmentTime" type="ser:duration" />
-      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-      <xs:element minOccurs="0" name="CancelDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="CancelTime" nillable="true" type="ser:duration" />
-      <xs:element minOccurs="0" name="Canceled" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
-      <xs:element minOccurs="0" name="FulfillDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="FulfillTime" nillable="true" type="ser:duration" />
-      <xs:element minOccurs="0" name="Fulfilled" type="xs:boolean" />
-      <xs:element minOccurs="0" name="HistoryID" type="xs:int" />
-      <xs:element minOccurs="0" name="PostponeDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="PostponeTime" nillable="true" type="ser:duration" />
-      <xs:element minOccurs="0" name="Postponed" type="xs:boolean" />
-      <xs:element minOccurs="0" name="RequestDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="RequestTime" type="ser:duration" />
-      <xs:element minOccurs="0" name="RevID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Review" nillable="true" type="tns:Review" />
-      <xs:element minOccurs="0" name="USER_" nillable="true" type="tns:USER_" />
-      <xs:element minOccurs="0" name="USER_1" nillable="true" type="tns:USER_" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ClientBarberHistory" nillable="true" type="tns:ClientBarberHistory" />
-  <xs:complexType name="Review">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-      <xs:element minOccurs="0" name="ClientBarberHistories" nillable="true" type="tns:ArrayOfClientBarberHistory" />
-      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
-      <xs:element minOccurs="0" name="Rating" type="xs:int" />
-      <xs:element minOccurs="0" name="RevID" type="xs:int" />
-      <xs:element minOccurs="0" name="Review1" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Reviewer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="USER_" nillable="true" type="tns:USER_" />
-      <xs:element minOccurs="0" name="USER_1" nillable="true" type="tns:USER_" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Review" nillable="true" type="tns:Review" />
-  <xs:complexType name="ArrayOfReview">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Review" nillable="true" type="tns:Review" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfReview" nillable="true" type="tns:ArrayOfReview" />
   <xs:complexType name="MenuItem">
     <xs:sequence>
       <xs:element minOccurs="0" name="BarberID" type="xs:int" />
@@ -129,4 +49,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfUSER_" nillable="true" type="tns:ArrayOfUSER_" />
+  <xs:complexType name="Appointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppointmentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AppointmentID" type="xs:int" />
+      <xs:element minOccurs="0" name="AppointmentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppointmentTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="BarberID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Appointment" nillable="true" type="tns:Appointment" />
 </xs:schema>

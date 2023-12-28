@@ -35,22 +35,10 @@ namespace ResBarbers.MainServiceReference {
         private string Addressline3Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Appointment[] AppointmentsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Appointment[] Appointments1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CampusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -75,12 +63,6 @@ namespace ResBarbers.MainServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ResidenceNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Review[] ReviewsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Review[] Reviews1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UniversityField;
@@ -163,32 +145,6 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Appointment[] Appointments {
-            get {
-                return this.AppointmentsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AppointmentsField, value) != true)) {
-                    this.AppointmentsField = value;
-                    this.RaisePropertyChanged("Appointments");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Appointment[] Appointments1 {
-            get {
-                return this.Appointments1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Appointments1Field, value) != true)) {
-                    this.Appointments1Field = value;
-                    this.RaisePropertyChanged("Appointments1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Campus {
             get {
                 return this.CampusField;
@@ -210,32 +166,6 @@ namespace ResBarbers.MainServiceReference {
                 if ((object.ReferenceEquals(this.CityField, value) != true)) {
                     this.CityField = value;
                     this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
-            get {
-                return this.ClientBarberHistoriesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
-                    this.ClientBarberHistoriesField = value;
-                    this.RaisePropertyChanged("ClientBarberHistories");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories1 {
-            get {
-                return this.ClientBarberHistories1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClientBarberHistories1Field, value) != true)) {
-                    this.ClientBarberHistories1Field = value;
-                    this.RaisePropertyChanged("ClientBarberHistories1");
                 }
             }
         }
@@ -345,32 +275,6 @@ namespace ResBarbers.MainServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Review[] Reviews {
-            get {
-                return this.ReviewsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ReviewsField, value) != true)) {
-                    this.ReviewsField = value;
-                    this.RaisePropertyChanged("Reviews");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Review[] Reviews1 {
-            get {
-                return this.Reviews1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Reviews1Field, value) != true)) {
-                    this.Reviews1Field = value;
-                    this.RaisePropertyChanged("Reviews1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string University {
             get {
                 return this.UniversityField;
@@ -444,749 +348,6 @@ namespace ResBarbers.MainServiceReference {
                 if ((object.ReferenceEquals(this.UserTypeField, value) != true)) {
                     this.UserTypeField = value;
                     this.RaisePropertyChanged("UserType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Appointment", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
-    [System.SerializableAttribute()]
-    public partial class Appointment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime AppointmentDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AppointmentIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AppointmentStatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan AppointmentTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BarberIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ClientIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StyleIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime AppointmentDate {
-            get {
-                return this.AppointmentDateField;
-            }
-            set {
-                if ((this.AppointmentDateField.Equals(value) != true)) {
-                    this.AppointmentDateField = value;
-                    this.RaisePropertyChanged("AppointmentDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AppointmentID {
-            get {
-                return this.AppointmentIDField;
-            }
-            set {
-                if ((this.AppointmentIDField.Equals(value) != true)) {
-                    this.AppointmentIDField = value;
-                    this.RaisePropertyChanged("AppointmentID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AppointmentStatus {
-            get {
-                return this.AppointmentStatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AppointmentStatusField, value) != true)) {
-                    this.AppointmentStatusField = value;
-                    this.RaisePropertyChanged("AppointmentStatus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan AppointmentTime {
-            get {
-                return this.AppointmentTimeField;
-            }
-            set {
-                if ((this.AppointmentTimeField.Equals(value) != true)) {
-                    this.AppointmentTimeField = value;
-                    this.RaisePropertyChanged("AppointmentTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BarberID {
-            get {
-                return this.BarberIDField;
-            }
-            set {
-                if ((this.BarberIDField.Equals(value) != true)) {
-                    this.BarberIDField = value;
-                    this.RaisePropertyChanged("BarberID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
-            get {
-                return this.ClientBarberHistoriesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
-                    this.ClientBarberHistoriesField = value;
-                    this.RaisePropertyChanged("ClientBarberHistories");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ClientID {
-            get {
-                return this.ClientIDField;
-            }
-            set {
-                if ((this.ClientIDField.Equals(value) != true)) {
-                    this.ClientIDField = value;
-                    this.RaisePropertyChanged("ClientID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StyleID {
-            get {
-                return this.StyleIDField;
-            }
-            set {
-                if ((this.StyleIDField.Equals(value) != true)) {
-                    this.StyleIDField = value;
-                    this.RaisePropertyChanged("StyleID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_ {
-            get {
-                return this.USER_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
-                    this.USER_Field = value;
-                    this.RaisePropertyChanged("USER_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_1 {
-            get {
-                return this.USER_1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
-                    this.USER_1Field = value;
-                    this.RaisePropertyChanged("USER_1");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ClientBarberHistory", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
-    [System.SerializableAttribute()]
-    public partial class ClientBarberHistory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Appointment AppointmentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime AppointmentDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AppointmentIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan AppointmentTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BarberIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CancelDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.TimeSpan> CancelTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool CanceledField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ClientIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FulfillDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.TimeSpan> FulfillTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool FulfilledField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HistoryIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> PostponeDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.TimeSpan> PostponeTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool PostponedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime RequestDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan RequestTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> RevIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.Review ReviewField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Appointment Appointment {
-            get {
-                return this.AppointmentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AppointmentField, value) != true)) {
-                    this.AppointmentField = value;
-                    this.RaisePropertyChanged("Appointment");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime AppointmentDate {
-            get {
-                return this.AppointmentDateField;
-            }
-            set {
-                if ((this.AppointmentDateField.Equals(value) != true)) {
-                    this.AppointmentDateField = value;
-                    this.RaisePropertyChanged("AppointmentDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AppointmentID {
-            get {
-                return this.AppointmentIDField;
-            }
-            set {
-                if ((this.AppointmentIDField.Equals(value) != true)) {
-                    this.AppointmentIDField = value;
-                    this.RaisePropertyChanged("AppointmentID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan AppointmentTime {
-            get {
-                return this.AppointmentTimeField;
-            }
-            set {
-                if ((this.AppointmentTimeField.Equals(value) != true)) {
-                    this.AppointmentTimeField = value;
-                    this.RaisePropertyChanged("AppointmentTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BarberID {
-            get {
-                return this.BarberIDField;
-            }
-            set {
-                if ((this.BarberIDField.Equals(value) != true)) {
-                    this.BarberIDField = value;
-                    this.RaisePropertyChanged("BarberID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CancelDate {
-            get {
-                return this.CancelDateField;
-            }
-            set {
-                if ((this.CancelDateField.Equals(value) != true)) {
-                    this.CancelDateField = value;
-                    this.RaisePropertyChanged("CancelDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.TimeSpan> CancelTime {
-            get {
-                return this.CancelTimeField;
-            }
-            set {
-                if ((this.CancelTimeField.Equals(value) != true)) {
-                    this.CancelTimeField = value;
-                    this.RaisePropertyChanged("CancelTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Canceled {
-            get {
-                return this.CanceledField;
-            }
-            set {
-                if ((this.CanceledField.Equals(value) != true)) {
-                    this.CanceledField = value;
-                    this.RaisePropertyChanged("Canceled");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ClientID {
-            get {
-                return this.ClientIDField;
-            }
-            set {
-                if ((this.ClientIDField.Equals(value) != true)) {
-                    this.ClientIDField = value;
-                    this.RaisePropertyChanged("ClientID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FulfillDate {
-            get {
-                return this.FulfillDateField;
-            }
-            set {
-                if ((this.FulfillDateField.Equals(value) != true)) {
-                    this.FulfillDateField = value;
-                    this.RaisePropertyChanged("FulfillDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.TimeSpan> FulfillTime {
-            get {
-                return this.FulfillTimeField;
-            }
-            set {
-                if ((this.FulfillTimeField.Equals(value) != true)) {
-                    this.FulfillTimeField = value;
-                    this.RaisePropertyChanged("FulfillTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Fulfilled {
-            get {
-                return this.FulfilledField;
-            }
-            set {
-                if ((this.FulfilledField.Equals(value) != true)) {
-                    this.FulfilledField = value;
-                    this.RaisePropertyChanged("Fulfilled");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int HistoryID {
-            get {
-                return this.HistoryIDField;
-            }
-            set {
-                if ((this.HistoryIDField.Equals(value) != true)) {
-                    this.HistoryIDField = value;
-                    this.RaisePropertyChanged("HistoryID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> PostponeDate {
-            get {
-                return this.PostponeDateField;
-            }
-            set {
-                if ((this.PostponeDateField.Equals(value) != true)) {
-                    this.PostponeDateField = value;
-                    this.RaisePropertyChanged("PostponeDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.TimeSpan> PostponeTime {
-            get {
-                return this.PostponeTimeField;
-            }
-            set {
-                if ((this.PostponeTimeField.Equals(value) != true)) {
-                    this.PostponeTimeField = value;
-                    this.RaisePropertyChanged("PostponeTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Postponed {
-            get {
-                return this.PostponedField;
-            }
-            set {
-                if ((this.PostponedField.Equals(value) != true)) {
-                    this.PostponedField = value;
-                    this.RaisePropertyChanged("Postponed");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime RequestDate {
-            get {
-                return this.RequestDateField;
-            }
-            set {
-                if ((this.RequestDateField.Equals(value) != true)) {
-                    this.RequestDateField = value;
-                    this.RaisePropertyChanged("RequestDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan RequestTime {
-            get {
-                return this.RequestTimeField;
-            }
-            set {
-                if ((this.RequestTimeField.Equals(value) != true)) {
-                    this.RequestTimeField = value;
-                    this.RaisePropertyChanged("RequestTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> RevID {
-            get {
-                return this.RevIDField;
-            }
-            set {
-                if ((this.RevIDField.Equals(value) != true)) {
-                    this.RevIDField = value;
-                    this.RaisePropertyChanged("RevID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.Review Review {
-            get {
-                return this.ReviewField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ReviewField, value) != true)) {
-                    this.ReviewField = value;
-                    this.RaisePropertyChanged("Review");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_ {
-            get {
-                return this.USER_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
-                    this.USER_Field = value;
-                    this.RaisePropertyChanged("USER_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_1 {
-            get {
-                return this.USER_1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
-                    this.USER_1Field = value;
-                    this.RaisePropertyChanged("USER_1");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Review", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
-    [System.SerializableAttribute()]
-    public partial class Review : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BarberIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistoriesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ClientIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int RatingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int RevIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Review1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ReviewerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ResBarbers.MainServiceReference.USER_ USER_1Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BarberID {
-            get {
-                return this.BarberIDField;
-            }
-            set {
-                if ((this.BarberIDField.Equals(value) != true)) {
-                    this.BarberIDField = value;
-                    this.RaisePropertyChanged("BarberID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.ClientBarberHistory[] ClientBarberHistories {
-            get {
-                return this.ClientBarberHistoriesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClientBarberHistoriesField, value) != true)) {
-                    this.ClientBarberHistoriesField = value;
-                    this.RaisePropertyChanged("ClientBarberHistories");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ClientID {
-            get {
-                return this.ClientIDField;
-            }
-            set {
-                if ((this.ClientIDField.Equals(value) != true)) {
-                    this.ClientIDField = value;
-                    this.RaisePropertyChanged("ClientID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Rating {
-            get {
-                return this.RatingField;
-            }
-            set {
-                if ((this.RatingField.Equals(value) != true)) {
-                    this.RatingField = value;
-                    this.RaisePropertyChanged("Rating");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int RevID {
-            get {
-                return this.RevIDField;
-            }
-            set {
-                if ((this.RevIDField.Equals(value) != true)) {
-                    this.RevIDField = value;
-                    this.RaisePropertyChanged("RevID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Review1 {
-            get {
-                return this.Review1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Review1Field, value) != true)) {
-                    this.Review1Field = value;
-                    this.RaisePropertyChanged("Review1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Reviewer {
-            get {
-                return this.ReviewerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ReviewerField, value) != true)) {
-                    this.ReviewerField = value;
-                    this.RaisePropertyChanged("Reviewer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_ {
-            get {
-                return this.USER_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_Field, value) != true)) {
-                    this.USER_Field = value;
-                    this.RaisePropertyChanged("USER_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ResBarbers.MainServiceReference.USER_ USER_1 {
-            get {
-                return this.USER_1Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.USER_1Field, value) != true)) {
-                    this.USER_1Field = value;
-                    this.RaisePropertyChanged("USER_1");
                 }
             }
         }
@@ -1326,6 +487,147 @@ namespace ResBarbers.MainServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Appointment", Namespace="http://schemas.datacontract.org/2004/07/ResBarbers_Backend")]
+    [System.SerializableAttribute()]
+    public partial class Appointment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime AppointmentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AppointmentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppointmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan AppointmentTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BarberIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StyleIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime AppointmentDate {
+            get {
+                return this.AppointmentDateField;
+            }
+            set {
+                if ((this.AppointmentDateField.Equals(value) != true)) {
+                    this.AppointmentDateField = value;
+                    this.RaisePropertyChanged("AppointmentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AppointmentID {
+            get {
+                return this.AppointmentIDField;
+            }
+            set {
+                if ((this.AppointmentIDField.Equals(value) != true)) {
+                    this.AppointmentIDField = value;
+                    this.RaisePropertyChanged("AppointmentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppointmentStatus {
+            get {
+                return this.AppointmentStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentStatusField, value) != true)) {
+                    this.AppointmentStatusField = value;
+                    this.RaisePropertyChanged("AppointmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan AppointmentTime {
+            get {
+                return this.AppointmentTimeField;
+            }
+            set {
+                if ((this.AppointmentTimeField.Equals(value) != true)) {
+                    this.AppointmentTimeField = value;
+                    this.RaisePropertyChanged("AppointmentTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BarberID {
+            get {
+                return this.BarberIDField;
+            }
+            set {
+                if ((this.BarberIDField.Equals(value) != true)) {
+                    this.BarberIDField = value;
+                    this.RaisePropertyChanged("BarberID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientID {
+            get {
+                return this.ClientIDField;
+            }
+            set {
+                if ((this.ClientIDField.Equals(value) != true)) {
+                    this.ClientIDField = value;
+                    this.RaisePropertyChanged("ClientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StyleID {
+            get {
+                return this.StyleIDField;
+            }
+            set {
+                if ((this.StyleIDField.Equals(value) != true)) {
+                    this.StyleIDField = value;
+                    this.RaisePropertyChanged("StyleID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MainServiceReference.IMainService")]
     public interface IMainService {
@@ -1395,6 +697,12 @@ namespace ResBarbers.MainServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUsers", ReplyAction="http://tempuri.org/IMainService/GetUsersResponse")]
         System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/MakeAppointment", ReplyAction="http://tempuri.org/IMainService/MakeAppointmentResponse")]
+        bool MakeAppointment(ResBarbers.MainServiceReference.Appointment NewAppointment);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/MakeAppointment", ReplyAction="http://tempuri.org/IMainService/MakeAppointmentResponse")]
+        System.Threading.Tasks.Task<bool> MakeAppointmentAsync(ResBarbers.MainServiceReference.Appointment NewAppointment);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1510,6 +818,14 @@ namespace ResBarbers.MainServiceReference {
         
         public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType) {
             return base.Channel.GetUsersAsync(UserType);
+        }
+        
+        public bool MakeAppointment(ResBarbers.MainServiceReference.Appointment NewAppointment) {
+            return base.Channel.MakeAppointment(NewAppointment);
+        }
+        
+        public System.Threading.Tasks.Task<bool> MakeAppointmentAsync(ResBarbers.MainServiceReference.Appointment NewAppointment) {
+            return base.Channel.MakeAppointmentAsync(NewAppointment);
         }
     }
 }

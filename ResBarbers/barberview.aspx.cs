@@ -15,6 +15,8 @@ namespace ResBarbers
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            int UserID = int.Parse((Session["UserID"].ToString()));
+
             if (Request.QueryString["StyleID"] != null && Request.QueryString["Action"] != null)
             {
                 int StyleID = int.Parse(Request.QueryString["StyleID"].ToString());
@@ -78,9 +80,8 @@ namespace ResBarbers
                                 <img src={m.StyleImage} class='w-50 h-100' alt=''></a>
 
                             <ul class='item_hover'>
-                                <li><a href='barberview.aspx?StyleID={m.StyleID}&&Action=Request'>
-                                    <img src='images/bootstrap-icons-1.11.2/bell.svg' alt='request' data-bs-toggle='tooltip' data-bs-placement='top' title='Request'></a></li>
-
+                             <li><a href='hairstyles.aspx?StyleID={m.StyleID}&&BarberID={m.BarberID}&&ClientID={UserID}'>
+                                <img src='images/bootstrap-icons-1.11.2/bell.svg' alt='request' data-bs-toggle='tooltip' data-bs-placement='top' title='Request'></a></li>
                             </ul>
                         </div>
 
@@ -112,7 +113,40 @@ namespace ResBarbers
 
         protected void OnClientBook(object sender, EventArgs e)
         {
+            if (Request.QueryString["ClientID"] != null && Request.QueryString["BarberID"] != null && Request.QueryString["StyleID"] != null)
+            {
+                int clientID = int.Parse(Request.QueryString["ClientID"].ToString());
+                int barberID = int.Parse(Request.QueryString["BarberID"].ToString());
+                int styleID = int.Parse(Request.QueryString["StyleID"].ToString());
 
+                //DateTime appointmentDate = DateTime.Parse(AppDate.Value);
+                DateTime appointmentDate = DateTime.Parse("2023-04-05");
+
+                TimeSpan appointmentTime = TimeSpan.Parse("14:30");
+                //TimeSpan appointmentTime = TimeSpan.Parse(AppTime.Value);
+                string appointmentStatus = "Request";
+
+                var newAppointment = new Appointment
+                {
+                    ClientID = clientID,
+                    BarberID = barberID,
+                    StyleID = styleID,
+                    AppointmentDate = appointmentDate,
+                    AppointmentTime = appointmentTime,
+                    AppointmentStatus = appointmentStatus
+                };
+
+                bool created = SR.MakeAppointment(newAppointment);
+
+                if (created.Equals(true))
+                {
+                    Response.Redirect("hairstyles.aspx");
+                }
+                else
+                {
+                    Response.Redirect("index.aspx");
+                }
+            }
         }
     }
 }

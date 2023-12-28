@@ -77,7 +77,7 @@
                         <h3>Book Haircut</h3>
                         <div class="form-request">
                             <label for="date">Available Dates:</label>
-                            <select id="date" name="time" required>
+                            <select id="AppDate" runat="server" name="time" required>
                                 <option value="">-- Select Date --</option>
                                 <option value="25-12-2023">25 December 2023</option>
                                 <option value="09-02-2024">09 February 2024</option>
@@ -86,7 +86,7 @@
                             </select>
 
                             <label for="time">Avaliable Time Slots:</label>
-                            <select id="time" name="time" disabled>
+                            <select id="AppTime" runat="server" name="time">
                                 <option value="">-- Select Time --</option>
                                 <option value="09:00">09:00 AM</option>
                                 <option value="10:00">10:00 AM</option>
