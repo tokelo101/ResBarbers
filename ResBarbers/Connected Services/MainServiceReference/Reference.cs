@@ -1366,11 +1366,35 @@ namespace ResBarbers.MainServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/EditHairstyle", ReplyAction="http://tempuri.org/IMainService/EditHairstyleResponse")]
         System.Threading.Tasks.Task<bool> EditHairstyleAsync(int StyleID, ResBarbers.MainServiceReference.MenuItem Hairstyle);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetHairstyle", ReplyAction="http://tempuri.org/IMainService/GetHairstyleResponse")]
+        ResBarbers.MainServiceReference.MenuItem GetHairstyle(int StyleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetHairstyle", ReplyAction="http://tempuri.org/IMainService/GetHairstyleResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem> GetHairstyleAsync(int StyleID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetBarberHairstyles", ReplyAction="http://tempuri.org/IMainService/GetBarberHairstylesResponse")]
         ResBarbers.MainServiceReference.MenuItem[] GetBarberHairstyles(int BarberID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetBarberHairstyles", ReplyAction="http://tempuri.org/IMainService/GetBarberHairstylesResponse")]
         System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetBarberHairstylesAsync(int BarberID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAllHairstyles", ReplyAction="http://tempuri.org/IMainService/GetAllHairstylesResponse")]
+        ResBarbers.MainServiceReference.MenuItem[] GetAllHairstyles();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAllHairstyles", ReplyAction="http://tempuri.org/IMainService/GetAllHairstylesResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetAllHairstylesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUser", ReplyAction="http://tempuri.org/IMainService/GetUserResponse")]
+        ResBarbers.MainServiceReference.USER_ GetUser(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUser", ReplyAction="http://tempuri.org/IMainService/GetUserResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_> GetUserAsync(int UserID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUsers", ReplyAction="http://tempuri.org/IMainService/GetUsersResponse")]
+        ResBarbers.MainServiceReference.USER_[] GetUsers(string UserType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetUsers", ReplyAction="http://tempuri.org/IMainService/GetUsersResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1448,12 +1472,44 @@ namespace ResBarbers.MainServiceReference {
             return base.Channel.EditHairstyleAsync(StyleID, Hairstyle);
         }
         
+        public ResBarbers.MainServiceReference.MenuItem GetHairstyle(int StyleID) {
+            return base.Channel.GetHairstyle(StyleID);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem> GetHairstyleAsync(int StyleID) {
+            return base.Channel.GetHairstyleAsync(StyleID);
+        }
+        
         public ResBarbers.MainServiceReference.MenuItem[] GetBarberHairstyles(int BarberID) {
             return base.Channel.GetBarberHairstyles(BarberID);
         }
         
         public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetBarberHairstylesAsync(int BarberID) {
             return base.Channel.GetBarberHairstylesAsync(BarberID);
+        }
+        
+        public ResBarbers.MainServiceReference.MenuItem[] GetAllHairstyles() {
+            return base.Channel.GetAllHairstyles();
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.MenuItem[]> GetAllHairstylesAsync() {
+            return base.Channel.GetAllHairstylesAsync();
+        }
+        
+        public ResBarbers.MainServiceReference.USER_ GetUser(int UserID) {
+            return base.Channel.GetUser(UserID);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_> GetUserAsync(int UserID) {
+            return base.Channel.GetUserAsync(UserID);
+        }
+        
+        public ResBarbers.MainServiceReference.USER_[] GetUsers(string UserType) {
+            return base.Channel.GetUsers(UserType);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.USER_[]> GetUsersAsync(string UserType) {
+            return base.Channel.GetUsersAsync(UserType);
         }
     }
 }
