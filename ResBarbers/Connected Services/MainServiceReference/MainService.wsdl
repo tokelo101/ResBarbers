@@ -73,6 +73,12 @@
   <wsdl:message name="IMainService_GetUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUsersResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_MakeAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_MakeAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeAppointmentResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMainService">
     <wsdl:operation name="RegisterUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/RegisterUser" message="tns:IMainService_RegisterUser_InputMessage" />
@@ -117,6 +123,10 @@
     <wsdl:operation name="GetUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetUsers" message="tns:IMainService_GetUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetUsersResponse" message="tns:IMainService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/MakeAppointment" message="tns:IMainService_MakeAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/MakeAppointmentResponse" message="tns:IMainService_MakeAppointment_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
@@ -213,6 +223,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetUsers">
       <soap:operation soapAction="http://tempuri.org/IMainService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeAppointment">
+      <soap:operation soapAction="http://tempuri.org/IMainService/MakeAppointment" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
