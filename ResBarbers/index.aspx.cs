@@ -79,7 +79,7 @@ namespace ResBarbers
             }
             else
             {
-                display = "<h1>You have no Menu Items</h1>";
+                display = "<h1>No hairstyles to offer yet</h1>";
             }
 
             haircut.InnerHtml = display;
