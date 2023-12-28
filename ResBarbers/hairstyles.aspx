@@ -65,46 +65,8 @@
           </div>
         <div class="row no-gutters justify-content-center" id="haircut" runat="server">
 
-            <div class="col-lg-4 col-md-6 col-sm-6">
-
-                <div class="media-body">
-                    <div class="product__item">
-                        <div class="product__item__pic  set-bg" data-setbg="images/haircuts/Male/fade.png">
-                            <a href="#?ID=">
-                                <img src="images/haircuts/Male/fade.png" class="w-50 h-100" alt=""></a>
-
-                            <ul class="product__hover">
-                                <li><a href="#">
-                                    <img src="images/bootstrap-icons-1.11.2/heart.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist"></a></li>
-                                <li><a href="hairstyleview.aspx">
-                                    <img src="images/bootstrap-icons-1.11.2/eye.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="View"></a></li>
-                                <li><a href="#" onclick="openPopup()">
-                                    <img src="images/bootstrap-icons-1.11.2/bell.svg" alt="" data-bs-toggle="tooltip" data-bs-placement="top" title="Request"></a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="product__item__text">
-                        <h2>Fade</h2>
-                        <p>Description goes here 1</p>
-                        <p>Description goes here 2</p>
-                        <p>Description goes here 3</p>
-                        <p>Description goes here 4</p>
-
-                        <h3>R67.25</h3>
-
-                        <div class="rating">
-                            <i class="fa fa-star-o">*</i>
-                            <i class="fa fa-star-o">*</i>
-                            <i class="fa fa-star-o">*</i>
-                            <i class="fa fa-star-o">*</i>
-                            <i class="fa fa-star-o">*</i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-           
+            
+           <%-- Dynamic display --%>
 
         </div>
 
