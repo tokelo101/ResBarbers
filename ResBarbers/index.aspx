@@ -176,7 +176,7 @@
                                 </select>
 
                                 <label for="time">Avaliable Time Slots:</label>
-                                <select id="time" name="time" disabled>
+                                <select id="time" name="time">
                                     <option value="">-- Select Time --</option>
                                     <option value="09:00">09:00 AM</option>
                                     <option value="10:00">10:00 AM</option>

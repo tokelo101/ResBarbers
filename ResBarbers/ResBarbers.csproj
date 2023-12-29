@@ -245,6 +245,9 @@
     <Content Include="Connected Services\MainServiceReference\ResBarbers.MainServiceReference.USER_.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MainServiceReference\ResBarbers.MainServiceReference.Appointment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

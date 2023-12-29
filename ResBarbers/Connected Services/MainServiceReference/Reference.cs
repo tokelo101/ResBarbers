@@ -703,6 +703,18 @@ namespace ResBarbers.MainServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/MakeAppointment", ReplyAction="http://tempuri.org/IMainService/MakeAppointmentResponse")]
         System.Threading.Tasks.Task<bool> MakeAppointmentAsync(ResBarbers.MainServiceReference.Appointment NewAppointment);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAppointment", ReplyAction="http://tempuri.org/IMainService/GetAppointmentResponse")]
+        ResBarbers.MainServiceReference.Appointment GetAppointment(int BarberID, string Status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAppointment", ReplyAction="http://tempuri.org/IMainService/GetAppointmentResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.Appointment> GetAppointmentAsync(int BarberID, string Status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAppointments", ReplyAction="http://tempuri.org/IMainService/GetAppointmentsResponse")]
+        ResBarbers.MainServiceReference.Appointment[] GetAppointments(int BarberID, string Status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMainService/GetAppointments", ReplyAction="http://tempuri.org/IMainService/GetAppointmentsResponse")]
+        System.Threading.Tasks.Task<ResBarbers.MainServiceReference.Appointment[]> GetAppointmentsAsync(int BarberID, string Status);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -826,6 +838,22 @@ namespace ResBarbers.MainServiceReference {
         
         public System.Threading.Tasks.Task<bool> MakeAppointmentAsync(ResBarbers.MainServiceReference.Appointment NewAppointment) {
             return base.Channel.MakeAppointmentAsync(NewAppointment);
+        }
+        
+        public ResBarbers.MainServiceReference.Appointment GetAppointment(int BarberID, string Status) {
+            return base.Channel.GetAppointment(BarberID, Status);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.Appointment> GetAppointmentAsync(int BarberID, string Status) {
+            return base.Channel.GetAppointmentAsync(BarberID, Status);
+        }
+        
+        public ResBarbers.MainServiceReference.Appointment[] GetAppointments(int BarberID, string Status) {
+            return base.Channel.GetAppointments(BarberID, Status);
+        }
+        
+        public System.Threading.Tasks.Task<ResBarbers.MainServiceReference.Appointment[]> GetAppointmentsAsync(int BarberID, string Status) {
+            return base.Channel.GetAppointmentsAsync(BarberID, Status);
         }
     }
 }

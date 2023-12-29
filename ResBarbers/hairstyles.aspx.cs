@@ -100,7 +100,7 @@ namespace ResBarbers
 
                 TimeSpan appointmentTime = TimeSpan.Parse("14:30");
                 //TimeSpan appointmentTime = TimeSpan.Parse(AppTime.Value);
-                string appointmentStatus = "Request";
+                string appointmentStatus = "Pending";
 
                 var newAppointment = new Appointment
                 {
