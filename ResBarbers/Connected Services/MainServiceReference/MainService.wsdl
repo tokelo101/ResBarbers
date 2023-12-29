@@ -79,6 +79,18 @@
   <wsdl:message name="IMainService_MakeAppointment_OutputMessage">
     <wsdl:part name="parameters" element="tns:MakeAppointmentResponse" />
   </wsdl:message>
+  <wsdl:message name="IMainService_GetAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAppointments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointments" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAppointments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMainService">
     <wsdl:operation name="RegisterUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/RegisterUser" message="tns:IMainService_RegisterUser_InputMessage" />
@@ -127,6 +139,14 @@
     <wsdl:operation name="MakeAppointment">
       <wsdl:input wsaw:Action="http://tempuri.org/IMainService/MakeAppointment" message="tns:IMainService_MakeAppointment_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMainService/MakeAppointmentResponse" message="tns:IMainService_MakeAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetAppointment" message="tns:IMainService_GetAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetAppointmentResponse" message="tns:IMainService_GetAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetAppointments" message="tns:IMainService_GetAppointments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetAppointmentsResponse" message="tns:IMainService_GetAppointments_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
@@ -232,6 +252,24 @@
     </wsdl:operation>
     <wsdl:operation name="MakeAppointment">
       <soap:operation soapAction="http://tempuri.org/IMainService/MakeAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointment">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointments">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetAppointments" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
