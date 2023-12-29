@@ -172,8 +172,7 @@
   <xs:element name="GetAppointment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AppointmentID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -184,11 +183,26 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AppointmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="AppointmentStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAppointmentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAppointments">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="BarberID" type="xs:int" />
-        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AppointmentStatus" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
