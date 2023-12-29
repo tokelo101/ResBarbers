@@ -169,4 +169,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BarberID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetAppointmentResult" nillable="true" type="q10:Appointment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppointments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BarberID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppointmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ResBarbers_Backend" minOccurs="0" name="GetAppointmentsResult" nillable="true" type="q11:ArrayOfAppointment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

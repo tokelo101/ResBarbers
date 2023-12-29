@@ -15,7 +15,11 @@ namespace ResBarbers
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int UserID = int.Parse((Session["UserID"].ToString()));
+            int UserID = 0;
+
+            if (Session["UserID"]!=null) {
+               UserID = int.Parse((Session["UserID"].ToString()));
+            }
 
             if (Request.QueryString["StyleID"] != null && Request.QueryString["Action"] != null)
             {
@@ -113,7 +117,9 @@ namespace ResBarbers
 
         protected void OnClientBook(object sender, EventArgs e)
         {
-            if (Request.QueryString["ClientID"] != null && Request.QueryString["BarberID"] != null && Request.QueryString["StyleID"] != null)
+            //Note: if int.Parse(Request.QueryString["ClientID"].ToString())==0 the the user is not loggedIn
+
+            if (Request.QueryString["ClientID"] != null && int.Parse(Request.QueryString["ClientID"].ToString()) != 0 && Request.QueryString["BarberID"] != null && Request.QueryString["StyleID"] != null)
             {
                 int clientID = int.Parse(Request.QueryString["ClientID"].ToString());
                 int barberID = int.Parse(Request.QueryString["BarberID"].ToString());
@@ -124,7 +130,7 @@ namespace ResBarbers
 
                 TimeSpan appointmentTime = TimeSpan.Parse("14:30");
                 //TimeSpan appointmentTime = TimeSpan.Parse(AppTime.Value);
-                string appointmentStatus = "Request";
+                string appointmentStatus = "Pending";
 
                 var newAppointment = new Appointment
                 {
