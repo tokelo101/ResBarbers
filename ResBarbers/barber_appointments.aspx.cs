@@ -16,7 +16,48 @@ namespace ResBarbers
         {
             if (Session["UserID"]!=null)
             {
+
                 int BarberID = int.Parse(Session["UserID"].ToString());
+
+
+                if (Request.QueryString["Action"]!=null && Request.QueryString["AppointmentID"] != null)
+                {
+                    string Action = Request.QueryString["Action"].ToString();
+                    int AppointmentID = int.Parse(Request.QueryString["AppointmentID"].ToString());
+
+                    switch (Action)
+                    {
+                        case "Accept":
+                            {
+                                bool Updated = SR.UpdateAppointment(AppointmentID, "Approved");
+                            }break;
+                        case "Decline":
+                            {
+                                bool Updated = SR.UpdateAppointment(AppointmentID, "Declined");
+                            }
+                            break;
+                        case "Fulfil":
+                            {
+                                bool Updated = SR.UpdateAppointment(AppointmentID, "Fulfiled");
+                            }
+                            break;
+                        case "Postpone":
+                            {
+                                bool Updated = SR.UpdateAppointment(AppointmentID, "Postponed");
+                            }
+                            break;
+                        case "Cancel":
+                            {
+                                bool Updated = SR.UpdateAppointment(AppointmentID, "Canceled");
+                            }
+                            break;
+                    }
+                }
+
+
+
+
+
 
                 dynamic appointments = SR.GetAppointments(BarberID, "Approved");
                 dynamic requests = SR.GetAppointments(BarberID, "Pending");
@@ -41,9 +82,10 @@ namespace ResBarbers
                         <h5>Time: {a.AppointmentTime}</h5>
 
                         <div class='container-fluid'>
-                        <Button ID ='BtnFulfil' runat='server' Text='Fulfil' OnClick='OnFulfil' class='btn btn-success'>Fulfil</Button>
-                        <Button ID ='BtnCancel' runat='server' Text='Cancel' OnClick='OnAccept' class='btn btn-success'>Cancel</Button>
-                        <Button ID ='BtnPostpone' runat='server' Text='Postpone' OnClick='OnDecline' class='btn btn-danger'>Postpone</Button>
+                        <a href='barber_appointments.aspx?Action=Fulfil&&ClientID={a.ClientID}&&AppointmentID={a.AppointmentID}'class='btn btn-success' >Fulfil</a>
+                        <a href='barber_appointments.aspx?Action=Postpone&&ClientID={a.ClientID}&&AppointmentID={a.AppointmentID}'class='btn btn-warning' >Postpone</a>
+                        <a href='barber_appointments.aspx?Action=Cancel&&ClientID={a.ClientID}&&AppointmentID={a.AppointmentID}'class='btn btn-danger' >Cancel</a>
+
 
                         </div>
                         </div>
@@ -74,8 +116,8 @@ namespace ResBarbers
                         <h5>Time: {a.AppointmentTime}</h5>
 
                         <div class='container-fluid'>
-                        <Button ID ='BtnAccept' runat='server' Text='Accept' OnClick='OnAccept' class='btn btn-success'>Accept</Button>
-                        <Button ID ='BtnDecline' runat='server' Text='Decline' OnClick='OnDecline' class='btn btn-danger'>Decline</Button>
+                        <a href='barber_appointments.aspx?Action=Accept&&ClientID={a.ClientID}&&AppointmentID={a.AppointmentID}'class='btn btn-success' >Accept</a>
+                        <a href='barber_appointments.aspx?Action=Decline&&ClientID={a.ClientID}&&AppointmentID={a.AppointmentID}'class='btn btn-danger' >Decline</a>
 
                         </div>
                         </div>
@@ -87,19 +129,5 @@ namespace ResBarbers
             }
         }
 
-        protected void OnAccept(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void OnDecline(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void OnFulfil(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

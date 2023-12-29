@@ -394,6 +394,7 @@ h1, h2, h3, h4, h5, h6, label {
 .barber-feed, .client-feed {
     padding: 10px; /* Add padding for spacing */
     margin-top:50px;
+    background-color:rgb(10,10,10,0.5);
 }
 
 .barber-view, .client-view {
