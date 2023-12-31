@@ -19,7 +19,16 @@ namespace ResBarbers
 
         }
 
+        protected void OnPreview(object sender, EventArgs e)
+        {
+            string display = "";
 
+            display = $@"
+                        <img id='profile-photo-preview' src=images/Users/{profile_Photo.Value} alt='Profile Photo' class='profile-photo'>
+                        ";
+            previewPhoto.InnerHtml = display;
+        }
+        
         protected void OnRegisterClick(object sender, EventArgs e)
         {
 
@@ -39,9 +48,9 @@ namespace ResBarbers
                 Addressline1 = Session["Addressline1"].ToString(),
                 Addressline2 = Session["Addressline2"].ToString(),
                 Addressline3 = Session["Addressline3"].ToString(),
-                UserType = "Barber",
+                UserType = Session["UserType"].ToString(),
 
-                UserPicture = "JohnDoeImage.png",
+                UserPicture = "images/Users/" + profile_Photo.Value,
                 UserName = uname.Value,
                 About = about.Value,
                 PassPhrase = Secrecy.HashPassword(password.Value)

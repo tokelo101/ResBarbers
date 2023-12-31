@@ -15,6 +15,33 @@ namespace ResBarbers
     {
 
         /// <summary>
+        /// profile_Photo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile profile_Photo;
+
+        /// <summary>
+        /// preview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button preview;
+
+        /// <summary>
+        /// previewPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl previewPhoto;
+
+        /// <summary>
         /// uname control.
         /// </summary>
         /// <remarks>

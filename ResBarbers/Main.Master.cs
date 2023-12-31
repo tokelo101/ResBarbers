@@ -17,7 +17,7 @@ namespace ResBarbers
         {
 
             string userType = "";
-            if (Session["UserType"] != null)
+            if (Session["UserType"] != null && Session["UserID"] != null)
             {
                 //General
                 string logout = "hidden";
