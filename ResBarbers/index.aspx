@@ -17,21 +17,21 @@
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active">
-                        <img src="images/haircuts/male/fade (2).png" class="d-block w-100" alt="...">
+                        <img src="images/haircuts/FadeB.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h1>1</h1>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/haircuts/male/dreadlogs.png" class="d-block w-100" alt="...">
+                        <img src="images/haircuts/cornrowsA.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h1>2</h1>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/haircuts/female/cornrows (4).png" class="d-block w-100" alt="...">
+                        <img src="images/haircuts/FadeF.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h1>3</h1>
                             <p>Some representative placeholder content for the second slide.</p>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/haircuts/Male/Bald.png" alt="Profile Picture">
+                        <img src="images/Users/PuleNko.png" alt="Profile Picture">
                         <div class="carousel-caption d-none d-md-block bg-gradient">
 
                             <h3>Pule Nko</h3>
@@ -64,25 +64,25 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/haircuts/Female/cornrows (3).png" alt="Profile Picture">
+                        <img src="images/Users/BobLee.png" alt="Profile Picture">
                         <div class="carousel-caption d-none d-md-block bg-gradient">
 
-                            <h3>Jananina Pukwe</h3>
-                            <h5>Female</h5>
-                            <h5>UJ, SWT</h5>
-                            <h5>Very good at cornrows</h5>
+                            <h3>Bob Lee</h3>
+                            <h5>Male</h5>
+                            <h5>UJ, APK</h5>
+                            <h5>the best clippermanship in the place</h5>
 
                             <button class="btn btn-light">View</button>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/haircuts/Female/cornrows (4).png" alt="Profile Picture">
+                        <img src="images/Users/JohnDoe.png" alt="Profile Picture">
                         <div class="carousel-caption d-none d-md-block bg-gradient">
 
-                            <h3>Jananina Pukwe</h3>
-                            <h5>Female</h5>
-                            <h5>UJ, SWT</h5>
-                            <h5>Very good at cornrows</h5>
+                            <h3>John Doe</h3>
+                            <h5>Male</h5>
+                            <h5>UL, Mankweng</h5>
+                            <h5>I do all sorts of hair</h5>
 
                             <button class="btn btn-light">View</button>
                         </div>

@@ -17,7 +17,7 @@ namespace ResBarbers
         {
 
             string userType = "";
-            if (Session["UserType"] != null && Session["UserID"] != null)
+            if (Session["UserType"] != null && Session["UserID"] != null && int.Parse(Session["UserID"].ToString()) != 0)
             {
                 //General
                 string logout = "hidden";

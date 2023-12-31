@@ -50,7 +50,7 @@ namespace ResBarbers
                 Addressline3 = Session["Addressline3"].ToString(),
                 UserType = Session["UserType"].ToString(),
 
-                UserPicture = "images/Users/" + profile_Photo.Value,
+                UserPicture = "images/Users/" + profile_Photo.Value.ToString(),
                 UserName = uname.Value,
                 About = about.Value,
                 PassPhrase = Secrecy.HashPassword(password.Value)

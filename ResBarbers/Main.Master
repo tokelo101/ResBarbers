@@ -21,6 +21,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo/ResBarberLogo.png">
 </head>
 <body>
     <div class="navbar navbar-expand-md navbar-light">
@@ -111,8 +112,22 @@
 
 
     <footer>
-            <p>Author: tokelo monare | copyright©️ 2023 | <a href="tokelomonare@gmail.com">email</a></p>
-     
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <img src="images/bootstrap-icons-1.11.2/envelope.svg" />
+                    <br /><a href = "mailto: tokelomonare@gmail.com">Email</a>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/bootstrap-icons-1.11.2/telephone.svg" /><p>0603238443</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/bootstrap-icons-1.11.2/linkedin.svg" />
+                    <br />
+                    <a href="https://www.linkedin.com/in/tokelo-monare-a812b6236/">Linkedin</a>
+                </div>
+                     <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Tokelo Monare | All Rights Reserved</p>
+            
+            </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
